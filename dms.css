@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*header*/
+.header{
+    background-color: #2D3446;
+    display: flex;
+}
+.headbox{
+    width: 50%;
+    height: 70px;
+    padding:10px;
+    box-sizing: border-box; 
+}
+.headbox img{
+    height: 100%;
+    cursor: pointer;
+}
+.headbox ul{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.headbox ul li{
+display: inline;
+font-size: 20px;
+margin-left: 30px;
+}
+.headbox ul li a:hover{
+    color:#D3AC2B;
+}
+a{
+    text-decoration: none;
+    color:white; 
+}
+.headitem li a:hover{
+    color:white;
+
+    
+}
+.headitem li a{
+    
+    color:#C9CFD5;
+}
+/*=============================================*/
+   /*輪播圖*/
+   .banner{
+    height: 550px;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+  
+ /*搜尋框*/
+ .search{
+     display: flex;
+     height: 60px;
+     background-color: #CBD0D8;/*更改*/
+     align-items: center;
+     justify-content: center;
+
+ }
+ .sitem{
+     width: 200px;
+     height: 25px;
+     background-color: white;
+     margin-left: 30px;
+     text-align: center;
+     line-height: 25px;
+     border-radius: 5px;  
+ }
+ .sitem:hover{
+     background-color:#333D51 ;
+     color: white;
+     cursor: pointer;
+ }
+ .search button{
+    width: 60px;
+    height: 30px;
+    margin-left: 30px;
+    border: none;
+    background-color: #D3AC2B;
+}
+.search button:hover{
+    background-color: #2D3446;
+    color: white;
+    cursor: pointer;
+}
+ /*熱門目的地*/
+ .dest{
+      display: flex;
+      background-color:#F4F3EA;
+      margin-top: 50px;
+      
+  }
+  .dleft{
+      width: 30%;
+      background-color: #F4F3EA;
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      position: relative;
+  }
+  .text{
+      width: 100%;
+      height: 150px;
+      text-align: center;
+      z-index: 3;
+      
+  }
+  .text h2{
+      color:#D3AC2B;
+      font-size: 30px;
+  }
+  .text p{
+      font-size: 18px;
+      margin-top: 30px;
+  }
+  .shape{
+      width: 100%;
+      height: 100%;
+      background-color: #CBD0D8;
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+      position: absolute;
+      z-index: 1;
+  } 
+  .circle{
+      width: 80px;
+      height: 80px;
+      background-color: #D3AC2B;
+      position: absolute;
+      text-align: center;
+      line-height: 80px;
+      z-index: 2;
+      bottom:-20px;
+      right: 0;
+      border-radius:50% ;
+      cursor: pointer;
+  }
+  .textcircle{
+      width: 100px;
+      height: 100px;
+      background-color: crimson;
+  }
+  .circle:hover{
+      background-color: #2D3446;
+      color: white;
+  }
+  .dright{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.place{
+    width: 25%;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.ppic{
+    width: 100%;
+    height: 170px;
+    background-color: darkgreen;
+    overflow:hidden;
+}
+.place:hover{
+    opacity: 0.5;
+}
+.ppic img{
+    width: 100%;
+    height: 100%;
+}
+
+.pname{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #CBD0D8;
+    font-size: 18px;
+    color: black;
+
+}
+.roomtitle{
+    font-size: 18px;
+    height: 30px;
+    color: #000;
+    background-color: darkgoldenrod;
+}
+.dtext p{
+    font-size: 15px;
+}
+.title{
+    font-size: 30px;
+    color: #2D3446;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    
+}
+/*=============footer===================*/
+.footer{
+    font-size: 15px;
+    height: 30px;
+    background-color:#2D3446;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+}
+/*==========表格===========*/
+tr:nth-child(even){
+    background-color:#F4F3EA;
+}
+td{
+    width: 1200px;
+    height: 30px;
+    border: 1px solid #333D51;
+    text-align: center;
+    position: relative;
+}
+td a{
+    font-size: 14px;
+    color:white ;
+    background-color: #333D51;
+}
+td a:hover{
+    background-color: #D2AC2C;
+    color: #000;
+}
+
+thead {
+    background-color:#333D51;
+    color: #fff;
+}
+.tdbtn{
+    width: 35px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border: none;
+    background-color: #CBD0D8 ;
+    cursor: pointer;
+    position:absolute;
+    right: 10px;
+}
+.new{
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;  
+}
+.newbox{
+  width: 300px;
+  height: 300px;
+  background-color: #CAD0D7;
+  cursor: pointer;
+}
+.newbtn{
+  width: 50px;
+  height: 50px;
+  background-color: #CAD0D7;
+  color: #2D3446;
+text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.newbox:hover{
+opacity: 0.8;
+}
+.newbtn:hover{
+opacity: 0.8;
+color:#D3AC2B;
+background-color: #2D3446;
+}
+.newimg{
+  width: 300px;
+  height: 220px;
+  background-color: #2D3446;
+}
+.newtext{
+  width: 300px;
+  height: 80px;
+  padding: 5px;
+  box-sizing: border-box;
+
+}
+.newimg img{
+  width: 100%;
+  height: 100%;
+}
