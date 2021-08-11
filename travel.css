@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*==========================Header===============================*/
+.header {
+  height: 55px;
+  background: #EDEFEE;
+  position: relative;
+}
+.logo{
+  margin-left: 5px;
+  background-image: url(pic/logo.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.logo a {
+overflow: hidden;
+text-indent: 101%;
+white-space: nowrap;
+display: block;
+width: 64px;
+height: 64px;
+cursor: pointer;
+margin-left: 30px;
+}
+.hamburger {
+width: 40px;
+height: 40px;
+position: absolute;
+top: 10px;
+right: 10px;
+display: block;
+cursor: pointer;
+
+}
+.hamburger-line {
+width: 40px;
+height: 3px;
+background-color: #2D3446;
+margin: auto;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+box-shadow: 0px 10px 0px #2D3446, 0px -10px 0px #2D3446;
+border-radius: 50px;
+}
+.menu {
+background: #EDEFEE;
+height: 100vh;
+width: 60%;
+position: absolute;
+top: 0;
+left: 0;
+transform: translateX(-100%);
+transition: 0.5s;
+z-index: 3;
+overflow: hidden;
+
+}
+.menu li a {
+display: block;
+padding: 15px;
+margin: 0px 20px 10px;
+color: black;
+font-weight: 600;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 20px;
+text-align: center;
+}
+.menu li a:hover {
+color: white;
+}
+.menu ul li{
+list-style: none;
+}
+.menu li:hover{
+background-color: #D67940;
+transition: 0.2s;
+transform: scale(1.1);
+}
+#menu-switcher {
+display: none;
+}
+#menu-switcher:checked ~ .menu {
+transform: translateX(0%);
+}
+
+/*=======================BANNER==================================*/
+      .banner{
+        width: 100%;
+        height: 300px;
+        text-align: center;       
+        background-image:url(pic/tr5.jpg) ;
+        background-size:cover;
+      }
+      .banner span{
+        text-transform: uppercase;
+        display: block;
+      }
+      .text1{
+        line-height: 300px;
+        color: white;
+        font-size: 3vw;
+        font-weight: 600;
+        font-family:Verdana ;
+        letter-spacing: 8px;
+        animation: text 3s 100;
+
+      }
+      .text2{
+        font-size: 30px;
+        color: #6ab04c;
+      }
+      @keyframes text {
+        0%{
+          color: black;
+          margin-bottom: -40px;
+        }
+        30%{
+          letter-spacing: 10px;
+          margin-bottom: -40px;
+        }
+        85%{
+          letter-spacing: 8px;
+          margin-bottom: -40px;
+        }
+      }
+      .search{
+        /* margin-top: -150px; */
+        height: auto;
+        background-color: #178CA4;
+        /* opacity: 0.8; */
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .sitem{
+          width: 100%;
+          margin: 10px;
+          padding: 10px;
+          text-align: center;
+          line-height: 20px;
+          opacity: 1;
+          cursor: pointer;
+          border: none;
+          /* font-size: 18px; */
+      }
+      .sitem input{
+        width: 80%;
+        height: 25px;
+        
+      }
+      
+      select{
+          width:80%;
+          height: 25px;
+          background-color: white;
+          letter-spacing: 2px;
+          font-size: 15px;
+          
+      }
+      option{
+          letter-spacing: 10px;
+      }
+      .sitem button{
+         width:20%;
+         height: 25px;
+         border: none;
+         background-color: #072A40;
+         box-shadow: 0px 2px 3px #e8ece8;
+      }
+      
+      .sitem button:hover{
+         /* background-color: #2D3446; */
+         color: white;
+         cursor: pointer;
+      }
+      button a{
+        text-decoration: none;
+        color: white;
+      }
+
+
+/*=============tip===================*/
+.tip{
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tipleft{
+  width: 100%;
+  text-align: center;
+}
+
+.tbox{
+  width: 100%;
+  color: #000;
+}
+.item1{
+  width: 100%;
+  background-color: grey;
+}
+.item2{
+  display: none;
+  width: 100%;
+}
+/*=============footer===================*/
+.footer{
+  font-size: 15px;
+  height: 30px;
+  background-color:#2D3446;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+}
+
+/*=======================RWD===============================*/
+@media screen and (min-width: 768px) {
+.hamburger {
+display: none;
+}
+.header {
+display: flex;
+justify-content: space-between;
+}
+.menu {
+height: auto;
+width: auto;
+display: flex;
+position: relative;
+background: color #e8ece8;
+transform: translateX(-5%);
+}
+li:hover{
+    background-color: #2D3446;
+    
+}
+.banner{    
+  background-image:url(pic/ccc.jpg);
+  height: 500px;
+  
+}
+.text1{
+  font-size: 38px;
+  line-height: 500px;
+  animation: text 3s 100;
+}
+.search{
+  margin-top: -60px;
+  display: flex;
+  background-color: slategrey;
+  align-items: center;
+  justify-content: center;
+}
+.sitem button:hover{
+  text-decoration: none;
+  background-color:#D67940;
+  
+}
+
+}
+@media screen and (min-width: 992px) {
+  .search{
+    margin-top: -60px;
+    display: flex;
+    height: 60px;
+    background-color: black;
+    opacity: 0.8;
+    display: flex;
+  }
+  .sitem{
+    width: 15%;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    opacity: 1;
+    cursor: pointer;
+    border: none;
+    /* font-size: 18px; */
+  }
+  .sitem button{
+    width:70%;
+    height: 25px;
+    border: none;
+    background-color: #2D3446;
+    box-shadow:none;
+    
+ }
+
+  .tbox{
+    display: flex;
+    margin: 10px;
+    height: 200px;
+    
+  }
+  .item1{
+    width: 15%;
+    /* line-height: 70px; */
+  }
+  .item2{
+    width: 85%;
+    text-align: justify;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    /* background-image:url(pic/global.png) ; */
+    
+  }
+
+}

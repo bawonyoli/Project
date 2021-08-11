@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>到民宿。折扣優惠</title>
+    <link rel="stylesheet" href="dms.css">
+    <style>
+        .wrap{
+             width: 1200px;
+             margin: auto;
+             margin-bottom: 30px;
+         }
+         .row{
+             display: flex;
+         }
+         .seachbar{
+             width: 1200px;
+             margin: auto;
+             height: 50px;
+             background-color: #D2AC2C;
+             margin-top: 30px;
+             margin-bottom: 30px;
+             line-height: 50px;
+             text-align: center;
+         }
+
+         .footer{
+            font-size: 15px;
+            height: 30px;
+            background-color:#2D3446;
+            color: white;
+            text-align: center;
+            line-height: 30px;   
+        }
+        .sub{
+            display: flex;
+            height: 150px;
+            background-color: #F4F3EA;
+            position: relative;
+
+        } 
+        .subbox{
+            margin-top: 5px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+        .subtext{
+            width: 800px;
+            height: 100px;
+            background-color: #CBD0D8;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .subtext p{
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .subtext input{
+            width: 500px;
+            height: 35px;
+            border: none;
+            box-shadow:8px 8px 2px #333D51;
+        }
+        .subtext button{
+            background-color: green;
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            margin-left: 100px;
+            border: none;
+            color: white;
+        }
+        .subtext button:hover{
+            color: grey;
+            background-color: white;
+            cursor: pointer;
+            box-shadow: 0px 3px 5px 2px gray;
+        }
+        .item{
+            line-height: 30px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            height: 40px;
+            background-color: blanchedalmond;
+            margin-bottom: 10px;
+        }
+        .item:hover{
+            background-color: #CBD0D8;
+            cursor: pointer;
+        }
+
+
+.tdbtn:hover{
+    color:white;
+    background-color: #D3AC2B ;
+}
+.stepbox{
+    width: 1280px;
+    margin: auto;
+    height: 300px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+
+}
+.shapebox{
+    width: 250px;
+    height: 100%;
+    position: relative; 
+}
+ .shapebox:nth-child(odd){
+    top:30px;
+} 
+.shape2{
+    width: 80px;
+    height: 80px;
+    background-color: #D2AC2C;
+    position:absolute;
+    top:5px;
+    left:0px;
+    z-index:3;
+    font-size: 18px;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 50%;
+    
+}
+.shape3{
+    width:200px;
+    height: 220px;
+    border: 3px solid #333D51;
+    position:absolute;
+    top:20px;
+    left:20px;
+    z-index:2;
+}
+
+
+.shape4{
+    width: 200px;
+    height: 220px;
+    background-color: #CBD0D8 ;
+    text-align: center;
+    position:absolute;
+    top:40px;
+    left: 40px;
+    z-index:1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.smg{
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+  
+}
+.smg img{
+    width: 100%;
+
+}
+.juban{
+    width: 100%;
+    
+}
+.row{
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        .sale{
+            width: 600px;
+            display: flex;
+            position: relative;
+            box-sizing: border-box;
+            border-radius: 30px;
+            margin-bottom: 30px;
+        }
+        .salebox{
+            width: 500px;
+            height: 300px;
+            clip-path: polygon(0 0, 100% 0, 81% 100%, 0% 100%);
+            margin-left: 40px;
+            margin-top: -5px;
+            
+            
+            
+        }
+        .salebox img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+         
+        }
+
+        .saletext{
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color:#F4F3EA;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 8% 100%);
+            margin-top: 50px;
+            margin-left: -60px;
+            border-radius: 4px;
+            text-align: center;
+          
+            
+ 
+        }
+        .saletext p{
+            margin-top:40px ;
+            font-size: large;
+            
+        }
+        .saletext h4{
+            text-decoration: line-through;
+            
+        }
+        .time{
+            width: 400px;
+            margin: auto;
+            margin-bottom: 20px;
+            text-align: center;
+            height: 50px;
+            color: red;
+            line-height: 50px;
+        }
+        .po{
+            width: 120px;
+            height: 40px;
+            background-color:#D3AC2B;
+            margin-top: 20px;
+            margin-left: 140px;
+            line-height:40px;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('contrasticon.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('contrasticon.png');
+  cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="headbox"><a href="index.html"><img src="pic\logo_1.png" alt=""></a></div>
+        <div class="headbox">
+         <ul>
+             <li><a href="discount.html">折扣優惠</a></li>
+             <li><a href="houseall.html">民宿總覽</a></li>
+             <li><a href="travel.html">旅遊攻略</a></li>
+             <li><a href="host.html">旅宿業者專區</a></li>
+         </ul>
+        </div>
+    </div>
+
+    <div class="search">  
+        <div class="sitem">請選擇地點</div>
+        <div class="sitem">入住日期</div>
+        <div class="sitem">退房日期</div>
+        <div class="sitem">人數</div>
+        <button><a href="result.html">搜尋</a></button>
+        
+    </div>
+    <div class="title">信用卡付款超低價，獨家折扣碼來了--(2021.07更新)</div>
+ 
+        
+    <div class="dest">
+        <table>
+            <thead>
+                <tr>
+                    <th>適用銀行</th>
+                    <th>優惠內容</th>
+                    <th>有效期限</th>
+                    <th>優惠碼</th>
+                    <th>活動網址</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>台新銀行</td>
+                    <td>預訂5%折扣</td>
+                    <td>即日起 – 2021年12月15日23:59 前</td>
+                    <td>dkfod
+                    <button class="tdbtn">copy</button>
+                    </td>
+                    <td><a href="#">查看更多</a></td>
+                </tr>
+                <tr>
+                    <td>國泰世華銀行</td>
+                    <td>預訂10%折扣</td>
+                    <td>即日起 – 2021年12月15日23:59 前</td>
+                    <td>fglof66
+                    <button class="tdbtn">copy</button>
+                    </td>
+                    <td><a href="#">查看更多</a></td>
+                </tr>
+                <tr>
+                    <td>台北富邦銀行</td>
+                    <td>預訂10%折扣</td>
+                    <td>即日起 – 2021年12月15日23:59 前</td>
+                    <td>fgmkf45
+                        <button class="tdbtn">copy</button>
+                    </td> 
+                    <td><a href="#">查看更多</a></td>
+                </tr>
+                <tr>
+                    <td>中國信託</td>
+                    <td>預訂10%折扣</td>
+                    <td>即日起 – 2021年12月15日23:59 前</td>
+                    <td>4fg5ffs
+                        <button class="tdbtn">copy</button>
+                    </td> 
+                    <td><a href="#">查看更多</a></td>
+                </tr>
+                <tr>
+                    <td>花旗銀行</td>
+                    <td>預訂10%折扣</td>
+                    <td>即日起 – 2021年12月15日23:59 前</td>
+                    <td>weolf44
+                        <button class="tdbtn">copy</button>
+                    </td> 
+                    <td><a href="#">查看更多</a></td>
+                </tr>
+                <tr>
+                    <td>玉山銀行</td>
+                    <td>預訂10%折扣</td>
+                    <td>即日起 – 2021年12月15日23:59 前</td>
+                    <td>dse4f4
+                        <button class="tdbtn">copy</button>
+                    </td>
+                    <td><a href="#">查看更多</a></td>
+                </tr>
+            </tbody>
+            </table>
+    </div>
+
+
+    
+    
+
+<div class="title">優惠搶先看</div>
+<div class="time"><h2>8月即將推出，敬請期待</h2></div>
+<div class="row">
+    
+    <div class="sale">
+    <div class="salebox">
+        <img src="pic\tr6.jpg" alt=""></div>
+    <div class="saletext">
+        <h3>曼特先生</h3>
+        <span>台中市中區</span>
+        <p>標準雙人房</p>
+        <h4>TWD 2,000</h4>
+        <div class="po">TWD ？？？</div>
+    </div>
+    
+</div>
+<div class="sale">
+    <div class="salebox">
+        <img src="pic\tr1.jpg" alt=""></div>
+    <div class="saletext">
+        <h3>後山人家民宿A館</h3>
+        <span>台東縣鹿野鄉</span>
+        <p>暇意雙人房(附早餐)</p>
+        <h4>TWD 2,008</h4>
+        <div class="po">TWD ？？？</div>
+    </div>
+   
+</div></div>        
+<div class="row">
+    
+    <div class="sale">
+    <div class="salebox">
+        <img src="pic\tr2.jpg" alt=""></div>
+    <div class="saletext">
+        <h3>曼特先生</h3>
+        <span>台中市中區</span>
+        <p>標準雙人房</p>
+        <h4>TWD 2,000</h4>
+        <div class="po">TWD ？？？</div>
+    </div>
+    
+</div>
+<div class="sale">
+    <div class="salebox">
+        <img src="pic\tr3.jpg" alt=""></div>
+    <div class="saletext">
+        <h3>荷米旅居</h3>
+        <span>台中市中區</span>
+        <p>不含早餐專案</p>
+        <h4>TWD 1,008</h4>
+        <div class="po">TWD ？？？</div>
+    </div>
+   
+</div></div>        
+
+
+<div class="title">如何使用折扣代碼</div>
+<div class="stepbox">
+    <div class="shapebox">
+        <div class="shape2">Step 1</div>
+        <div class="shape3"></div>
+        <div class="shape4">
+            <span>選擇喜愛的房源</span>
+            <div class="smg"><img src="pic\b1.png" alt=""></div>
+        </div>
+    </div>
+    <div class="shapebox">
+        <div class="shape2">Step 2</div>
+        <div class="shape3"></div>
+        <div class="shape4">
+            <span>複製優惠碼</span>
+            <div class="smg"><img src="pic\b2.png" alt=""></div>
+        </div>
+    </div>
+    <div class="shapebox">
+        <div class="shape2">Step 3</div>
+        <div class="shape3"></div>
+        <div class="shape4">
+            <span>點擊 確認</span>
+            <div class="smg"><img src="pic\b3.png" alt=""></div>
+        </div>
+    </div>
+    <div class="shapebox">
+        <div class="shape2">Step 4</div>
+        <div class="shape3"></div>
+        <div class="shape4">
+            <span>完成</span>
+            <div class="smg"><img src="pic\b4.png" alt=""></div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="title">常見問題</div>
+<div class="wrap">
+    <div class="item">
+        <h3>▌使用折扣代碼有哪些規範及注意事項</h3>
+    </div>
+    <div class="item">
+        <h3>▌為什麼折扣代碼無法使用？</h3>
+    </div>
+    <div class="item">
+        <h3>▌取消訂單，此訂單使用的折扣代碼還能使用嗎？</h3>
+    </div>
+    <div class="item">
+        <h3>▌已經下訂單了，但未使用到折扣代碼，可以取消訂單嗎？</h3>
+    </div>
+    <div class="item">
+        <h3>▌折扣碼一個帳號能使用幾次？</h3>
+    </div>
+
+</div>
+
+<div class="sub">
+<div class="subbox" style="background-color: #333D51 ;"></div>
+<div class="subbox" style="background-color: #D3AC2B ;"></div>
+<div class="subbox" style="background-color: #CBD0D8 ;"></div>
+<div class="subtext">
+    <h3>最優惠的折扣訊息，都在會員電子報中</h3>
+    <p>立即訂閱</p>
+    <input type="text" value="" placeholder="請輸入電子郵件">
+    <button>訂閱</button>
+</div>
+</div>
+<div class="footer">Copyright © 2021 DMS Inc.</div>
+</body>
+</html>

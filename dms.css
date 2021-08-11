@@ -64,17 +64,15 @@ a{
 
  }
  .sitem{
-     width: 200px;
-     height: 25px;
-     background-color: white;
+     width: 300px;
+     background-color: #003d79;
+     height: 30px;
      margin-left: 30px;
      text-align: center;
      line-height: 25px;
      border-radius: 5px;  
  }
  .sitem:hover{
-     background-color:#333D51 ;
-     color: white;
      cursor: pointer;
  }
  .search button{
@@ -89,100 +87,87 @@ a{
     color: white;
     cursor: pointer;
 }
- /*熱門目的地*/
+ /*=====熱門目的地===========*/
  .dest{
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
       display: flex;
-      background-color:#F4F3EA;
       margin-top: 50px;
-      
   }
+
   .dleft{
-      width: 30%;
-      background-color: #F4F3EA;
       display: flex;
-      align-items:center;
-      justify-content:center;
-      position: relative;
-  }
-  .text{
-      width: 100%;
-      height: 150px;
+      width: 25%;
       text-align: center;
-      z-index: 3;
+      justify-content: center;
+      align-items: center;
       
   }
-  .text h2{
-      color:#D3AC2B;
-      font-size: 30px;
+  .dtext{
+    
   }
-  .text p{
-      font-size: 18px;
-      margin-top: 30px;
+  .dleft h2{
+    
+      line-height: 50px;
+      color: black;
   }
-  .shape{
-      width: 100%;
-      height: 100%;
-      background-color: #CBD0D8;
-      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-      position: absolute;
-      z-index: 1;
-  } 
-  .circle{
-      width: 80px;
-      height: 80px;
-      background-color: #D3AC2B;
-      position: absolute;
-      text-align: center;
-      line-height: 80px;
-      z-index: 2;
-      bottom:-20px;
-      right: 0;
-      border-radius:50% ;
-      cursor: pointer;
+  .dleft p{
+      margin-top: 10px;
+      line-height: 30px;
+      /* letter-spacing:5px; */
   }
-  .textcircle{
-      width: 100px;
-      height: 100px;
-      background-color: crimson;
-  }
-  .circle:hover{
-      background-color: #2D3446;
-      color: white;
-  }
+  .dleft button{
+        width: 80px;
+        height: 20px;
+        background-color: #D2AC2C;
+        cursor: pointer;
+        margin-top: 5px;
+        border: none;
+        color:white;
+       
+    }
+
   .dright{
-    width: 70%;
+    width: 75%;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
+   
 }
 .place{
     width: 25%;
-    height: 200px;
     box-sizing: border-box;
     padding: 5px;
     margin-bottom: 5px;
+    position: relative;
+
+    
 }
 .ppic{
     width: 100%;
-    height: 170px;
-    background-color: darkgreen;
+    height: auto;  
     overflow:hidden;
 }
-.place:hover{
-    opacity: 0.5;
-}
 .ppic img{
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2px;
+    transform:scale(1,1);transition: all 1s ease-out;
 }
-
+.ppic img:hover{
+    transform:scale(1.2,1.2);
+}
 .pname{
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    background-color: #CBD0D8;
-    font-size: 18px;
-    color: black;
+    position: absolute;
+    left: 16px;
+    bottom:10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    text-shadow: rgb(0 0 0 / 50%) 0px 1px 4px, rgb(0 0 0 / 87%) 1px 1px 4px;
+
 
 }
 .roomtitle{
@@ -248,20 +233,8 @@ thead {
     position:absolute;
     right: 10px;
 }
-.new{
-    width: 1200px;
-    height: 300px;
-    display: flex;
-    margin: auto;
-    align-items: center;
-    justify-content: space-evenly;  
-}
-.newbox{
-  width: 300px;
-  height: 300px;
-  background-color: #CAD0D7;
-  cursor: pointer;
-}
+
+
 .newbtn{
   width: 50px;
   height: 50px;
@@ -273,9 +246,7 @@ text-align: center;
   border-radius: 50%;
   cursor: pointer;
 }
-.newbox:hover{
-opacity: 0.8;
-}
+
 .newbtn:hover{
 opacity: 0.8;
 color:#D3AC2B;
@@ -285,6 +256,12 @@ background-color: #2D3446;
   width: 300px;
   height: 220px;
   background-color: #2D3446;
+}
+table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 .newtext{
   width: 300px;
@@ -296,4 +273,117 @@ background-color: #2D3446;
 .newimg img{
   width: 100%;
   height: 100%;
+  /* filter: grayscale(0.5); */
 }
+
+.bg {
+    background-image: 
+       linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6));
+    }
+    /*最新房源*/
+    .itemPanel{
+        position:relative;
+        width: 910px;
+        height:250px;
+        margin: auto;
+        overflow:hidden;
+        display: flex;
+        align-items: center;
+    }
+    .wrap1{
+        position:absolute;
+        top:5px;
+        left:5px;
+        width:3000px;
+        transition:left 1s;
+    }
+    .item{
+        margin: 10px;
+        width:280px;
+        height:250px;
+        background-color: yellow;
+        text-align: center;
+        float:left;
+        object-fit: over;
+    }
+    .item img{
+        width: 100%;
+        object-fit: over;
+        
+    }
+
+    #btnLeft,#btnRight{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        color:#2D3446;
+        font-size:30px;
+        background-color:#E0E0E0;
+        cursor: pointer;
+    }
+
+    #btnLeft[disabled], #btnRight[disabled]{
+        color:white;
+        font-size:30px;
+        weight:bold;
+    }  
+    #leftRightPanel{
+        width: 1080px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .slidecontainer {
+        width: 300px;;
+      }
+      
+      .slider {
+        -webkit-appearance: none;
+        
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+        background: goldenrod;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+      }
+      
+      .slider:hover {
+        opacity: 1;
+      }
+      
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 23px;
+        height: 24px;
+        border: 0;
+        cursor: pointer;
+        background-color: green;
+      }
+      
+      .slider::-moz-range-thumb {
+        width: 23px;
+        height: 24px;
+        border: 0;
+        
+        cursor: pointer;
+        background-color: green;
+      }
+      .range{
+        width: 300px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .rbox{
+        width: 80px;
+        height: 30px;
+        text-align: center;
+      }
+      /* #demo::before{
+        content: 'NT$ ';
+      } */

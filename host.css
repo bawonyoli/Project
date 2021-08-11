@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*==========================Header===============================*/
+.header {
+    height: 55px;
+    background: #EDEFEE;
+    position: relative;
+}
+.logo{
+    margin-left: 5px;
+    background-image: url(pic/logo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.logo a {
+overflow: hidden;
+text-indent: 101%;
+white-space: nowrap;
+display: block;
+width: 64px;
+height: 64px;
+cursor: pointer;
+margin-left: 30px;
+}
+.hamburger {
+width: 40px;
+height: 40px;
+position: absolute;
+top: 10px;
+right: 10px;
+display: block;
+cursor: pointer;
+
+}
+.hamburger-line {
+width: 40px;
+height: 3px;
+background-color: #2D3446;
+margin: auto;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+box-shadow: 0px 10px 0px #2D3446, 0px -10px 0px #2D3446;
+border-radius: 50px;
+}
+.menu {
+background: #EDEFEE;
+height: 100vh;
+width: 60%;
+position: absolute;
+top: 0;
+left: 0;
+transform: translateX(-100%);
+transition: 0.5s;
+z-index: 3;
+overflow: hidden;
+
+}
+.menu li a {
+display: block;
+padding: 15px;
+margin: 0px 20px 10px;
+color: black;
+font-weight: 600;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 20px;
+text-align: center;
+}
+.menu li a:hover {
+color: white;
+}
+.menu ul li{
+list-style: none;
+}
+.menu li:hover{
+ background-color: #D67940;
+ transition: 0.2s;
+ transform: scale(1.1);
+}
+#menu-switcher {
+display: none;
+}
+#menu-switcher:checked ~ .menu {
+transform: translateX(0%);
+}
+/*=============footer===================*/
+.footer{
+  font-size: 15px;
+  height: 30px;
+  background: #EDEFEE;
+  color: black ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+  text-align: center;
+  line-height: 30px;
+}
+
+.container{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+
+}
+.login{
+  margin-top: 30px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  text-align: center;
+}
+.link{
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.linkbox{
+  width: 80%;
+  height: 30vh;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px;
+  position: relative;
+  box-shadow: 3px 3px 3px #ccc;
+}
+.linkbox:nth-child(1){
+  background:	#FFEFD5; 
+  background-image: url(pic/001.png);
+  background-position: right;
+  background-repeat: no-repeat;
+
+}
+.linkbox:nth-child(2){
+  background:	#E6C3C3;
+  background-image:url(pic/002.png) ;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.linkbox:nth-child(3){
+  background: #EBEBFF;
+  background-image:url(pic/003.png) ;
+  background-position: right ;
+  background-repeat: no-repeat;
+
+}
+.linkbox:nth-child(4){
+  background: #FFE8FF;
+  background-image:url(pic/002.png) ;
+  background-position: right ;
+  background-repeat: no-repeat;
+}
+.linktext h3{
+  margin-top: 10px;
+  color: #2D3446;
+}
+.link ul{
+  margin-top:10px ;
+  position: relative;
+  overflow: hidden;
+
+}
+.linktext ul li{
+  font-size: 15px;
+  margin: 5px;
+  letter-spacing: 1px;
+
+
+
+}
+.linktext{
+  width: 50%;
+
+  position: absolute;
+}
+.link ul li:hover{
+  background-color:white;
+  transform: scale(1.1);
+  cursor: pointer;
+  
+
+}
+
+
+.link ul li a{
+  text-decoration: none;
+  color:black;
+}
+.qa{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.qabox{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 5px;
+  position: relative;
+  display: inline-block;
+
+
+}
+
+.box1{
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+.box1 button{
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-image: url(pic/b4.jpg);
+  background-position: center;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: none;
+  
+}
+.box1:hover{
+  background-color: #3e8e41;
+}
+.box2{
+  display: none;
+  background-color: #F5F5F5;
+}
+.a{
+  width: 100%;
+}
+
+.text{
+padding: 5px;
+width: 250px;
+height: 25px;
+background-color:#ccc;
+border: none;
+margin: 10px;
+box-sizing: border-box;
+/* text-align: center; */
+}
+
+form button{
+width: 100px;
+height: 25px;
+line-height: 25px;
+background-color: forestgreen;
+border: none;
+font-weight: 600;
+color: white;
+
+}
+form{
+font-weight: 600;
+display: flex;
+flex-wrap: wrap;
+
+}
+
+
+.ad{
+  width: 100%;
+  
+}
+.adbox{
+  height: 100px;
+  background-color: lightcoral;
+}
+/*=======================RWD===============================*/
+@media screen and (min-width: 768px) {
+.hamburger {
+display: none;
+}
+.header {
+display: flex;
+justify-content: space-between;
+}
+.menu {
+height: auto;
+width: auto;
+display: flex;
+position: relative;
+background: color #e8ece8;
+transform: translateX(-5%);
+}
+li:hover{
+    /* background-color: #2D3446; */
+    
+}
+
+.link{
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.linkbox{
+  width: 40%;
+
+}
+}
+@media screen and (min-width: 992px) {
+  .link{
+    display: flex;
+    justify-content:space-evenly;
+  }
+  .linkbox{
+    width: 35%;
+    height: 150px;
+  }
+}

@@ -1,0 +1,844 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*==========================Header===============================*/
+.header {
+    height: 55px;
+    background: #EDEFEE;
+    position: relative;
+}
+.logo{
+    margin-left: 5px;
+    background-image: url(pic/logo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.logo a {
+overflow: hidden;
+text-indent: 101%;
+white-space: nowrap;
+display: block;
+width: 64px;
+height: 64px;
+cursor: pointer;
+margin-left: 30px;
+}
+.hamburger {
+width: 40px;
+height: 40px;
+position: absolute;
+top: 10px;
+right: 10px;
+display: block;
+cursor: pointer;
+
+}
+.hamburger-line {
+width: 40px;
+height: 3px;
+background-color: #2D3446;
+margin: auto;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+box-shadow: 0px 10px 0px #2D3446, 0px -10px 0px #2D3446;
+border-radius: 50px;
+}
+.menu {
+background: #EDEFEE;
+height: 100vh;
+width: 60%;
+position: absolute;
+top: 0;
+left: 0;
+transform: translateX(-100%);
+transition: 0.5s;
+z-index: 3;
+overflow: hidden;
+
+}
+.menu li a {
+display: block;
+padding: 15px;
+margin: 0px 20px 10px;
+color: black;
+font-weight: 600;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 20px;
+text-align: center;
+}
+.menu li a:hover {
+color: white;
+}
+.menu ul li{
+list-style: none;
+}
+.menu li:hover{
+ background-color: #D67940;
+ transition: 0.2s;
+ transform: scale(1.1);
+}
+#menu-switcher {
+display: none;
+}
+#menu-switcher:checked ~ .menu {
+transform: translateX(0%);
+}
+/*===========*/
+
+
+/*=======================BANNER==================================*/
+      .banner{
+        width: 100%;
+        height: 300px;
+        text-align: center;       
+        background-image:url(../pic/bbb.jpg) ;
+        background-size:cover;
+      }
+      .banner span{
+        text-transform: uppercase;
+        display: block;
+      }
+      .text1{
+        line-height: 300px;
+        color: white;
+        font-size: 3vw;
+        font-weight: 600;
+        font-family:Verdana ;
+        letter-spacing: 8px;
+        animation: text 3s infinite ;
+
+      }
+      .text2{
+        font-size: 30px;
+        color: #6ab04c;
+      }
+      @keyframes text {
+        0%{
+          color: black;
+          margin-bottom: -40px;
+        }
+        30%{
+          letter-spacing: 10px;
+          margin-bottom: -40px;
+        }
+        85%{
+          letter-spacing: 8px;
+          margin-bottom: -40px;
+        }
+      }
+/*=====================搜尋框===============================*/
+.search{
+  /* margin-top: -150px; */
+  height: auto;
+  background-color: #178CA4;
+  /* opacity: 0.8; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.sitem{
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    line-height: 20px;
+    opacity: 1;
+    cursor: pointer;
+    border: none;
+    /* font-size: 18px; */
+}
+.sitem input{
+  width: 80%;
+  height: 25px;
+  
+}
+
+select{
+    width:80%;
+    height: 25px;
+    background-color: white;
+    letter-spacing: 2px;
+    font-size: 15px;
+    
+}
+option{
+    letter-spacing: 10px;
+}
+.sitem button{
+   width:20%;
+   height: 25px;
+   border: none;
+   background-color: #072A40;
+   box-shadow: 0px 2px 3px #e8ece8;
+}
+
+.sitem button:hover{
+   /* background-color: #2D3446; */
+   color: white;
+   cursor: pointer;
+}
+button a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+/*========================熱門目的地=====================*/
+.dest{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.dleft{
+  width: 100%;
+  text-align: center;
+}
+.dright{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.place{
+  width:50%;
+  box-sizing: border-box;
+  padding: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content:space-around;
+  
+  
+}
+.pname{
+  position: absolute;
+  left: 5px;
+  bottom:5px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 28px;
+  text-shadow: rgb(0 0 0 / 50%) 0px 1px 4px, rgb(0 0 0 / 87%) 1px 1px 4px;
+}
+.pname1{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-shadow: rgb(0 0 0 / 50%) 0px 1px 4px, rgb(0 0 0 / 87%) 1px 1px 4px;
+}
+.dleft button{
+  width: 60px;
+  height: 30px;
+  /* border-radius: 50%; */
+  background-repeat: no-repeat;
+  background-color:#6ab04c;
+  background-position: center;
+  cursor: pointer;
+  margin-top: 5px;
+  border: none;
+  color:black;
+
+
+  
+}
+.dleft p{
+  margin-top: 10px;
+  line-height: 30px;
+
+}
+.dtext h2{
+  font-size: 20px;
+}
+
+.ppic{
+  max-width: 200px;
+  height: 150px;  
+  overflow:hidden;
+  position: relative;
+  
+}
+.ppic img{
+  width: 100%;
+  height: 100%;
+  /* border-radius: 2px; */
+  transform: scale(1,1);
+  transition: all 1s ease-out;
+}
+.ppic img:hover{
+  transform:scale(1.2,1.2);
+}
+.dtext p{
+  font-size: 15px;
+}
+/*===========限時特賣=================*/
+.time{
+  width: 400px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 70px;
+  text-align: center;
+  height: 50px;
+  color: red;
+  line-height: 50px;
+
+}
+.sale{
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 10px;
+  box-sizing: border-box;
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+  overflow: hidden;
+}
+.salepic{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  object-fit: contain;  
+}
+.salepic img{
+  width: 100%;
+  height: 100%;
+}
+.sale img{
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.info{
+display: flex;
+justify-content: center;
+opacity: 0;
+position: absolute;
+box-sizing: border-box;
+background-color: rgba(0,0,0,.3);
+top: 0px;
+width: 100%;
+height: 100%;
+
+}
+.info button{
+
+color:white;
+background-color:hsl(359, 43%, 77%);
+width: 100px;
+height: 100px;
+border-radius: 50%;
+border: none;
+cursor: pointer;
+font-size: 1rem;
+opacity: 0.8;
+position: absolute;
+top: 20%;
+}
+
+.info:hover{
+transition: 500ms;
+opacity: 1;
+}
+.info h3{
+color: white;
+}
+
+
+.saletext{
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+.saletext span{
+  font-size: 14px;
+  color: #0283DF;
+  font-weight: 600;
+  
+}
+.mapicon::before{
+  display: inline-block;
+  content: '';
+  background-image: url(pic/i1.png);
+  background-position: center center;
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+}
+.sale ul{
+  display: flex;
+  margin-top: 5px;
+}
+.saletext ul li{
+  margin-left: 10px;
+  color: #28871c;
+  border:1px solid #28871c;
+  font-size: 13px;
+  letter-spacing:2px;
+  font-weight: 400;
+}
+.saletext p{
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.red{
+  font-weight: 600;
+  color:red;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.dele{
+  text-decoration: line-through;
+  color: #888888;
+  margin-left: 10px;
+}
+/*=================最新房源================*/
+.itemPanel{
+  display: none;
+  position:relative;
+  width: 300px;
+  height:250px;
+  margin: auto;
+  overflow:hidden;
+  display: flex;
+  align-items: center;
+}
+.wrap1{
+  position:absolute;
+  top:5px;
+  left:5px;
+  width:3000px;
+  transition:left 1s;
+}
+.item{
+  margin: 10px;
+  width:200px;
+  height:200px;
+  text-align: center;
+  float:left;
+  overflow: hidden;
+  position: relative;
+}
+.item img{
+  width: 100%;
+  height: 100%;
+}
+.newname h4{
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 250px;
+  position: absolute;
+  background-color: rgba(0,0,0,83);
+  color: white;
+  top: 0;
+  /* color: white; */
+  z-index: 2;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.newname h4:hover{
+ transition: 0.5s;
+ color: #000;
+background-color: rgba(222, 222, 224, 0);
+  opacity: 1;
+}
+#btnLeft,#btnRight{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  color:#2D3446;
+  font-size:30px;
+  background-color:#E0E0E0;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+}
+
+#btnLeft[disabled], #btnRight[disabled]{
+  color:white;
+  font-size:30px;
+  weight:bold;
+}  
+#leftRightPanel{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+/*================到民宿=================*/
+.final{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color:#F4F3EA;
+  margin-bottom: 30px;
+}
+.fbox{
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  
+}
+.tag{
+width: 15%;
+height: auto;
+
+
+}
+.tag img{
+width: 100%;
+}
+.tagtxt{
+width: 85%;
+height: auto;
+margin-left: 10px;
+
+
+}
+.tagtxt ul{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+/*=============footer===================*/
+.footer{
+  font-size: 15px;
+  height: 30px;
+  background: #EDEFEE;
+  color: black ;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+  text-align: center;
+  line-height: 30px;
+}
+/*=======================標題=================*/
+.title h2{
+  font-size: 20px;
+  color: #2D3446;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 15px;
+  
+}
+/*=======================RWD===============================*/
+@media screen and (min-width: 768px) {
+.hamburger {
+display: none;
+}
+.header {
+display: flex;
+justify-content: space-between;
+}
+.menu {
+height: auto;
+width: auto;
+display: flex;
+position: relative;
+background: color #e8ece8;
+transform: translateX(-5%);
+}
+li:hover{
+    /* background-color: #2D3446; */
+    
+}
+.title h2{
+  font-size: 22px;
+
+  
+}
+.place{
+  width: 25%;
+  box-sizing: border-box;
+  padding: 5px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.banner{    
+  background-image:url(pic/banner_6.jpg);
+  height: 500px;
+  
+}
+.detext h2{
+  font-size: 22px;
+}
+.text1{
+  font-size: 38px;
+  line-height: 500px;
+  animation: text 3s 100;
+}
+.search{
+  margin-top: -60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sitem button:hover{
+  text-decoration: none;
+  background-color:#D67940;
+  
+}
+
+.sale{
+  width: 45%;
+}
+.info button{
+  top: 15%;
+  }
+  .itemPanel{
+    width: 600px;
+
+  }
+  .final{
+    justify-content: space-evenly;
+  }
+  .fbox{
+    width: 40%;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    margin: 10px;
+    
+  }
+  .dtext p{
+    font-size: 15px;
+  
+  }
+}
+@media screen and (min-width: 992px) {
+  .search{
+    margin-top: -60px;
+    display: flex;
+    height: 60px;
+    background-color: black;
+    opacity: 0.8;
+    display: flex;
+  }
+  .sitem{
+    width: 15%;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    opacity: 1;
+    cursor: pointer;
+    border: none;
+    /* font-size: 18px; */
+  }
+  .sitem button{
+    width:70%;
+    height: 25px;
+    border: none;
+    background-color: #2D3446;
+    box-shadow:none;
+    
+ }
+ .title h2{
+  font-size: 24px;
+  
+}
+  .dest{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    margin-top: 80px;
+    
+}
+.dtext h2{
+  font-size: 24px;
+}
+.dleft{
+    display: flex;
+    width: 25%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dleft h2{
+  
+    line-height: 50px;
+    color: black;
+}
+
+
+.dright{
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+ 
+}
+
+.sale{
+  width: 22%;
+  
+  position: relative;
+  margin: 10px;
+  box-sizing: border-box;
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+}
+
+.info{
+display: flex;
+justify-content: center;
+opacity: 0;
+position: absolute;
+box-sizing: border-box;
+background-color: rgba(0,0,0,.3);
+top: 0px;
+width: 100%;
+height: 100%;
+
+}
+.info button{
+color:white;
+background-color:hsl(359, 43%, 77%);
+width: 80px;
+height: 80px;
+border-radius: 50%;
+border: none;
+cursor: pointer;
+font-size: 1rem;
+opacity: 0.8;
+
+
+
+}
+
+.info:hover{
+-webkit-transition: 500ms;
+opacity: 1;
+}
+.info h3{
+color: white;
+}
+
+.salepic{
+  height: 160px;
+}
+.saletext{
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+.saletext span{
+  font-size: 14px;
+  color: #0283DF;
+  font-weight: 600;
+  
+}
+
+.roomtitle{
+  font-size: 18px;
+  height: 30px;
+  color: #000;
+  background-color: darkgoldenrod;
+}
+.dtext p{
+  padding: 15px;
+
+}
+.dtext p{
+  font-size: 16px;
+
+}
+
+
+.itemPanel{
+  position:relative;
+  width: 910px;
+  height:250px;
+  margin: auto;
+  overflow:hidden;
+  display: flex;
+  align-items: center;
+}
+.wrap1{
+  position:absolute;
+  top:5px;
+  left:5px;
+  width:3000px;
+  transition:left 1s;
+}
+.item{
+  margin: 10px;
+  width:280px;
+  height:250px;
+  text-align: center;
+  float:left;
+  object-fit: over;
+}
+.item img{
+  width: 100%;
+  object-fit: over;
+  
+}
+
+#btnLeft,#btnRight{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  color:#2D3446;
+  font-size:30px;
+  background-color:#E0E0E0;
+  cursor: pointer;
+}
+
+#btnLeft[disabled], #btnRight[disabled]{
+  color:white;
+  font-size:30px;
+  weight:bold;
+}  
+#leftRightPanel{
+  max-width: 1080px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.final{
+  justify-content: space-evenly;
+}
+.fbox{
+  width:20%;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  margin: 10px;
+  
+}
+.tag img{
+width: 100%;
+}
+.tagtxt{
+width: 80%;
+height: auto;
+}
+
+}

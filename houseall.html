@@ -4,292 +4,254 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>到民宿。房型總覽</title>
-    <link rel="stylesheet" href="dms.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="houseall.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="test.js"></script>
     <style>
-      
-      .plan{
-            width: 100%;
-            height: 50px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            }
-            .list{
-                width: 100%;
-                position: relative;
-                z-index: 2;
-            }
-            .list ul{
-                display: flex;
-                justify-content: center;
-                
-            }
-
-            .list ul li{
-                width: 150px;
-                text-align: center;
-                font-size: 20px;
-                background-color: #D3AC2B ;
-                margin-left: 10px;
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-            .list ul li:hover{
-                background-color: #333D51 ;
-                
-                cursor: pointer;
-            }
-            .wrap{
-                width: 1200px;
-                margin: auto;
-                flex-wrap: wrap;
-                display: flex;
-                box-sizing: border-box;
-                justify-content: center;
-            }
-            .item{
-                width: 250px;
-                height: 250px;
-                background-color: #CBD0D8 ;
-                margin: 10px;
-                box-sizing: border-box;
-                position: relative;
-                cursor: pointer;
-                opacity: 0.8;
-            }
-            .item img{
-                width: 100%;
-                height: 100%;
-            }
-            .item:hover{
-                opacity: 1;
-            }
-            .text{
-                width: 250px;
-                height: 40px;
-                background-color:#F4F3EA;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                line-height: 40px;
-            }
-            .text{
-                color: #333D51;
-
-            }
-            .btn{
-                width: 600px;
-                margin: auto;
-                height: 40px;
-                display: flex;
-                justify-content: space-between;
-
-            }
-            .btnl{
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                background-color:#D3AC2B;
-                z-index: 3;
-                color: white;
-                text-align: center;
-                line-height: 30px;
-                font-size: 18px;
-                
-            }
-            .btn p{
-                line-height: 40px;
-                font-size: large;
-                cursor: pointer;
-                color: grey;
-            }
-
-            .btnl:hover{
-                background-color: #F4F3EA;
-                color: black;
-                cursor: pointer;
-            }
 
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="headbox"><a href="index.html"><img src="pic\logo_1.png" alt=""></a></div>
-        <div class="headbox">
-         <ul>
-             <li><a href="discount.html">折扣優惠</a></li>
-             <li><a href="houseall.html">民宿總覽</a></li>
-             <li><a href="travel.html">旅遊攻略</a></li>
-             <li><a href="travel.html">旅宿業者專區</a></li>
-         </ul>
-        </div>
+  <div class="header">
+    <input type="checkbox" name="menu-switcher" id="menu-switcher" />
+    <label for="menu-switcher" class="hamburger">
+      <div class="hamburger-line"></div>
+    </label>
+  <div class="logo">
+      <a href="index.html"></a>
+  </div>
+    <ul class="menu">
+      <li><a href="discount.html">折扣優惠</a></li>
+      <li><a href="houseall.html">民宿總覽</a></li>
+      <li><a href="travel.html">旅遊攻略</a></li>
+      <li><a href="host.html">旅宿業者專區</a></li>
+    </ul>
+  </div> 
+
+
+  <div class="search">  
+    <div class="sitem">
+        <input id="email" type="text" placeholder="輸入地名" >
     </div>
-    <div class="search">  
-        <div class="sitem">請選擇地點</div>
-        <div class="sitem">入住日期</div>
-        <div class="sitem">退房日期</div>
-        <div class="sitem">人數</div>
-        <button><a href="result.html">搜尋</a></button>
-        
+    <div class="sitem">
+        <input id="date" type="date" value="2021-08-11"  min="2021-08-11"></div>
+    <div class="sitem">
+        <input id="date" type="date" value="2021-08-12"  min="2021-08-12"></div>
+    <div class="sitem">
+        <select name="select_one">
+            <option value="1">1人</option>
+            <option value="2">2人</option>
+            <option value="3">3人</option>
+            <option value="3">4人</option>
+            <option value="3">5人</option>
+            <option value="3">6人</option>
+            </select>
     </div>
-<div class="title">民宿總覽</div>
-    <div class="plan">
-        <div class="list">
-            <ul>
-            <li><a href="">全部</a></li>
-            <li><a href="#">北部</a></li>
-            <li><a href="#">中部</a></li>
-            <li><a href="#">南部</a></li>
-            <li><a href="#">東部</a></li>
-            <li><a href="#">離島</a></li>
-        </ul>
+    <div class="sitem">
+        <button type="submit"><a href="result.html">搜尋</a></button>
+    </div></div>
+    <div class="title">
+      <h2>民宿總覽</h2>
     </div>
+    <div class="btnall">
+      <ul>
+        <li>全部</li>
+        <li>北部</li>
+        <li>中部</li>
+        <li>南部</li>
+        <li>東部</li>
+        <li>離島</li>
+    </ul>
     </div>
     <div class="wrap">
-        <div class="item">
-            <a href="room.html">
-            <img src="pic\tr2.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div></a>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p1.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\tr1.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p2.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\tr3.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p3.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\tr4.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p4.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\tr5.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p5.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\r1.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p6.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q4.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p7.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q3.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p6.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q2.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p5.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q1.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p4.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\tr2.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p3.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\tr1.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p2.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\r1.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p1.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q4.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p5.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q3.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p4.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q2.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p3.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q1.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p2.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\r1.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p4.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\c2.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p3.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q2.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p2.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q3.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p5.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\tr5.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p4.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\tr3.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p3.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\tr2.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p2.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\tr1.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p8.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\r1.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p2.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q4.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p3.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <img src="pic\q3.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
+      </div>
+      <div class="item" data-aos="fade-up">
+        <img src="pic/p1.jpg" alt="">
+        <div class="newname">
+          <h4>台東住宿 池上稻香文旅</h4>
         </div>
-        <div class="item">
-            <a href="room.html">
-            <img src="pic\tr2.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div></a>
-        </div>
-        <div class="item">
-            <img src="pic\tr1.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
-        </div>
-        <div class="item">
-            <img src="pic\tr5.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
-        </div>
-        <div class="item">
-            <img src="pic\tr3.jpg" alt="">
-            <div class="text"><strong>尤大廚的家</strong></div>
-        </div>
+      </div>
+     
+    </div>
         
-
-    </div>
-    <div class="btn">
-        <div class="btnl"><strong><</strong></div>
-        <p>1 2 3 4 5 6 7 8 9 10 </p>
-        <div class="btnl"><strong>></strong></div>
-    </div>
-    
-
+          
+     
     <div class="footer">Copyright © 2021 DMS Inc.</div>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500,
+            once: true,
+            // easing: 'ease-in-out-quart',
+            
+            
+         
+    })
+    </script>
+              
+              
 
 </body>
 </html>

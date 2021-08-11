@@ -4,312 +4,183 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>到民宿。搜尋結果</title>
-    <link rel="stylesheet" href="dms.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="room.css">
+    <script src="test.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="test.js"></script>
     <style>
-
-         .wrap{
-             margin-top:30px;
-         }
-
-         .content{
-             width: 1200px;
-             margin: auto;
-             margin-top: 20px;
-             background-color:#CBD0D8 ;
-             padding: 20px;
-             box-sizing: border-box;
-
-         }
-
-         .box{
-             width: 1000px;
-             margin-top:20px ;
-             display: flex;
-             flex-wrap: wrap;
-             margin: auto;
-             padding: 5px;
-             box-sizing: border-box;
-            justify-content: space-around;
-             margin-bottom: 10px;
-
-         }
-         .boxa{
-             width: 1000px;
-             height: 400px;
-             margin-top: 10px;
-             cursor: pointer;
-             margin-bottom: 10px;
-             opacity: 0.8;
-         }
-         .boxa img{
-             width: 100%;
-             height: 100%;
-         }
-         .boxb img{
-             width: 100%;
-             height: 100%;
-         }
-         .boxb{
-            width: 180px;
-            height: 150px;
-            cursor: pointer;
-            opacity: 0.8;
-         }
-         .box2{
-             width: 1000px;
-             height: 250px;
-             background-color: palegreen;
-             box-sizing: border-box;
-             margin-bottom: 15px;
-             display: flex;
-             justify-content: space-between;
-
-         }
-         .boxpa{
-            width: 500px;
-            height: 250px;
-            background-color:#F4F3EA;
+        body{
+            background-color: #FAFAFA;
+        }
+    </style>
+    <script>
+        function showLarge(e){
+          document.getElementById("large").src = e.target.src
         
-         }
-         .boxpa img{
-            width: 100%;
-            height: 100%;
+        }
         
+        function init(){
+        let imgs=document.getElementsByClassName("small");
+        for(let i=0;i<imgs.length;i++){
+            imgs[i].onclick=showLarge;
          }
-         .boxpa h3{
-             margin-top: 10px;
-             margin-left: 10px;
-         }
-         .boxpa p{
-             margin-top: 10px;
-             margin-left: 10px;
-         }
-         .boxpa button{
-             margin-top: 10px;
-             margin-left:200px;
-             border: none;
-             cursor: pointer;
-             width: 200px;
-             height: 35px;
-             background-color: #D3AC2B ;
-             color: white;
-             line-height: 35px;
-             font-size: 16px;
-         }
-         .footer{
-             margin-top: 30px;
-             font-size: 15px;
-             height: 30px;
-             background-color:#2D3446;
-             color: white;
-             text-align: center;
-             line-height: 30px;
-         }
-
-
-
-     </style>
+        }
+        
+        window.addEventListener("load",init,false);
+        </script>
 </head>
 <body>
-    <div class="header">
-        <div class="headbox"><a href="index.html"><img src="pic\logo_1.png" alt=""></a></div>
-        <div class="headbox">
-         <ul>
-             <li><a href="discount.html">折扣優惠</a></li>
-             <li><a href="houseall.html">民宿總覽</a></li>
-             <li><a href="travel.html">旅遊攻略</a></li>
-             <li><a href="host.html">旅宿業者專區</a></li>
-         </ul>
-        </div>
-    </div>
-    <div class="search">  
-        <div class="sitem">請選擇地點</div>
-        <div class="sitem">入住日期</div>
-        <div class="sitem">退房日期</div>
-        <div class="sitem">人數</div>
-        <button><a href="result.html">搜尋</a></button>
-        
-    </div>
+     <div class="header">
+        <input type="checkbox" name="menu-switcher" id="menu-switcher" />
+        <label for="menu-switcher" class="hamburger">
+          <div class="hamburger-line"></div>
+        </label>
+      <div class="logo">
+          <a href="index.html"></a>
+      </div>
+        <ul class="menu">
+          <li><a href="discount.html">折扣優惠</a></li>
+          <li><a href="houseall.html">民宿總覽</a></li>
+          <li><a href="travel.html">旅遊攻略</a></li>
+          <li><a href="host.html">旅宿業者專區</a></li>
+        </ul>
+      </div> 
 
-<div class="content">
-    <h2>葉綠宿．川閱</h2>
-    <span>台中市中區綠川里綠川西街123號8樓</span>
-    <div class="box">
-        <div class="boxa">
-            <img src="pic\q2.jpg" alt="">
+
+      <div class="search">  
+        <div class="sitem">
+            <input id="email" type="text" placeholder="輸入地名" >
         </div>
-        <div class="boxb">
-            <img src="pic\q1.jpg" alt="">
+        <div class="sitem">
+            <input id="date" type="date" value="2021-08-11"  min="2021-08-11"></div>
+        <div class="sitem">
+            <input id="date" type="date" value="2021-08-12"  min="2021-08-12"></div>
+        <div class="sitem">
+            <select name="select_one">
+                <option value="1">1人</option>
+                <option value="2">2人</option>
+                <option value="3">3人</option>
+                <option value="3">4人</option>
+                <option value="3">5人</option>
+                <option value="3">6人</option>
+                </select>
         </div>
-        <div class="boxb">
-            <img src="pic\q4.jpg" alt="">
+        <div class="sitem">
+            <button type="submit"><a href="result.html">搜尋</a></button>
+        </div></div>
+
+        <div class="wrap">
+           <h2>葉綠宿．川閱</h2>
+           
         </div>
-        <div class="boxb">
-            <img src="pic\r1.jpg" alt="">
-        </div>
-        <div class="boxb">
-            <img src="pic\tr3.jpg" alt="">
-        </div>
-        <div class="boxb">
-            <img src="pic\tr2.jpg" alt="">
-        </div>
-      
-    </div>
-    
-    <div class="box">
-        <div class="box2">
-            <div class="boxpa">
-                <img src="pic\r1.jpg" alt="">
+       <div class="test" data-aos="fade-up">
+           
+        <div class="up">
+            <img  id="large" src="pic/p3.jpg">
             </div>
-            <div class="boxpa">
-                <h3>標準四人房</h3>
-                <p>基本入住人數：4</p>
-                <p>禁菸房</p>
-                <p>標準雙人床</p>
-                <p>(房間內) 專屬衛浴</p>
-                <p>32 平方公尺</p>
-                <button><strong>查看可預訂日期</strong></button>
-            </div>
+            <div class="down">
+            <img src="pic/p1.jpg" class="small">
+            <img src="pic/p2.jpg" class="small">
+            <img src="pic/p6.jpg" class="small">
+            <img src="pic/p7.jpg" class="small">
             
-        </div>
-        <div class="box2">
-            <div class="boxpa">
-                <img src="pic\q1.jpg" alt="">
+            
             </div>
-            <div class="boxpa">
-                <h3>高級四人房</h3>
-                <p>獨立房間</p>
-                <p>禁菸房</p>
-                <p>標準雙人床</p>
-                <p>(房間內) 專屬衛浴</p>
-                <p>34 平方公尺</p>
-                <button><strong>查看可預訂日期</strong></button>
+       </div>
+       <div class="wrap">
+        <div class="right">
+            <div class="rightbox" data-aos="fade-up">
+                <div class="rimg">
+                 <img src="pic\q1.jpg" alt="">
+                </div>
+                <div class="rtext">
+                 <h3>標準四人房</h3>
+                 <span class="mapicon"> 4人</span>
+                 <ul>
+                     <li>禁菸房</li>
+                     <li>標準雙人床</li>
+                     <li>專屬衛浴</li>
+                 </ul>
+                 
+                 <p class="red">
+                     NT$ 1,220</p>
+                 <button>查看可預定日期</button>
+                </div>
             </div>
-        </div>
-        <div class="box2">
-            <div class="boxpa">
-                <img src="pic\q3.jpg" alt="">
+            <div class="rightbox" data-aos="fade-up">
+                <div class="rimg">
+                 <img src="pic\p1.jpg" alt="">
+                </div>
+                <div class="rtext">
+                 <h3>高級四人房</h3>
+                 <span class="mapicon"> 4人</span>
+                 <ul>
+                     <li>早餐</li>
+                     <li>免費停車</li>
+                     <li>免費取消</li>
+                   
+                 </ul>
+                 
+                 <p class="red">
+                     NT$ 1,220</p>
+                 <button>查看可預定日期</button>
+                </div>
             </div>
-            <div class="boxpa">
-                <h3>豪華四人房</h3>
-                <p>基本入住人數：4</p>
-                <p>禁菸房</p>
-                <p>標準雙人床</p>
-                <p>(房間內) 專屬衛浴</p>
-                <p>50 平方公尺</p>
-                <button><strong>查看可預訂日期</strong></button>
+            <div class="rightbox" data-aos="fade-up">
+                <div class="rimg">
+                 <img src="pic\p6.jpg" alt="">
+                </div>
+                <div class="rtext">
+                 <h3>豪華六人房</h3>
+                 <span class="mapicon"></span>
+                 <ul>
+                     <li>早餐</li>
+                     <li>免費取消</li>
+                     <li>免費WiFi</li>
+                 </ul>
+                 
+                 <p class="red">
+                     NT$ 1,220</p>
+                 <button>查看可預定日期</button>
+                </div>
             </div>
-        </div>
-        <div class="box2">
-            <div class="boxpa">
-                <img src="pic\c1.jpg" alt="">
+            <div class="rightbox" data-aos="fade-up">
+                <div class="rimg">
+                 <img src="pic\p3.jpg" alt="">
+                </div>
+                <div class="rtext">
+                 <h3>豪華八人房</h3>
+                 <span class="mapicon"> 8人</span>
+                 <ul>
+                     <li>免費停車</li>
+                     <li>免費取消</li>
+                     <li>免費WiFi</li>
+                 </ul>
+                 
+                 <p class="red">
+                     NT$ 1,220</p>
+                 <button>查看可預定日期</button>
+                </div>
             </div>
-            <div class="boxpa">
-                <h3>豪華六人房</h3>
-                <p>基本入住人數：4</p>
-                <p>禁菸房</p>
-                <p>標準雙人床</p>
-                <p>(房間內) 專屬衛浴</p>
-                <p>50 平方公尺</p>
-                <button><strong>查看可預訂日期</strong></button>
-            </div>
-        </div>
-        <div class="box2">
-            <div class="boxpa">
-                <img src="pic\r1.jpg" alt="">
-            </div>
-            <div class="boxpa">
-                <h3>豪華六人房</h3>
-                <p>基本入住人數：6</p>
-                <p>禁菸房</p>
-                <p>標準雙人床</p>
-                <p>(房間內) 專屬衛浴</p>
-                <p>50 平方公尺</p>
-                <button><strong>查看可預訂日期</strong></button>
-            </div>
-        </div>
-        <div class="box2">
-            <div class="boxpa">
-                <img src="pic\q3.jpg" alt="">
-            </div>
-            <div class="boxpa">
-                <h3>豪華八人房</h3>
-                <p>基本入住人數：8</p>
-                <p>禁菸房</p>
-                <p>標準雙人床</p>
-                <p>(房間內) 專屬衛浴</p>
-                <p>50 平方公尺</p>
-                <button><strong>查看可預訂日期</strong></button>
-            </div>
-        </div>
-        <div class="box2">
-            <div class="boxpa">
-                <img src="pic\q1.jpg" alt="">
-            </div>
-            <div class="boxpa">
-                <h3>高級四人房</h3>
-                <p>獨立房間</p>
-                <p>禁菸房</p>
-                <p>標準雙人床</p>
-                <p>(房間內) 專屬衛浴</p>
-                <p>34 平方公尺</p>
-                <button><strong>查看可預訂日期</strong></button>
-            </div>
-        </div>
-        <div class="box2">
-            <div class="boxpa">
-                <img src="pic\c1.jpg" alt="">
-            </div>
-            <div class="boxpa">
-                <h3>豪華八人房</h3>
-                <p>基本入住人數：8</p>
-                <p>禁菸房</p>
-                <p>標準雙人床</p>
-                <p>(房間內) 專屬衛浴</p>
-                <p>50 平方公尺</p>
-                <button><strong>查看可預訂日期</strong></button>
-            </div>
-        </div>
+       </div>
+       
     </div>
-</div>
 
-    <div class="title">殘酷舞台</div>
-        <div class="new">
-            <div class="newbtn"><strong><</strong></div>
-            <div class="newbox">
-                <div class="newimg"><img src="pic\a2.jpg" alt=""></div>
-                <div class="newtext">
-                    <h3>葉綠宿．川閱</h3>
-                    <span>台中市西屯區</span>
-                    <p>雙人房 TWD5,070起</p>
-                    
-                </div>
+        <div class="footer">Copyright © 2021 DMS Inc.</div>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1500,
+                once: true,
+                // easing: 'ease-in-out-quart',
                 
-            </div>
-            <div class="newbox">
-
-                <div class="newimg"><img src="pic\r1.jpg" alt=""></div>
-                <div class="newtext">
-                    <h3>桂之旅</h3>
-                    <span>台中市西屯區</span>
-                    <p>雙人房 TWD5,000起</p>
-                    
-                </div>
-            </div>
-            <div class="newbox">
-                <div class="newimg"><img src="pic\tr2.jpg" alt=""></div>
-                <div class="newtext">
-                    <h3>享棧民宿</h3>
-                    <span>台中市西屯區</span>
-                    <p>雙人房 TWD5,050起</p>
-                    
-                </div>
-            </div>
-            <div class="newbtn"><strong>></strong></div>
-        </div>
-    
-    <div class="footer">Copyright © 2021 DMS Inc.</div>
+                
+             
+        })
+        </script>
+              
+              
 
 </body>
 </html>

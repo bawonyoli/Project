@@ -3,621 +3,466 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>到民宿</title>
-    <link rel="stylesheet" href="dms.css">
-    <style>
-        .wrap{
-            width: 960px;
-            margin: auto;
-            background-color: #CAD0D7;
-        }
-        
-      .bimg{
-        width: 500px;
-        margin-top: 40px;
-        z-index: 1;
-      }
-      .bimg img{
-        box-shadow: 17px 20px 0px 0px #CBD0D8;   
-      }
-       
-        .searchbar{
-            width:600px;
-            height: 400px;
-            z-index: 2;  
-            text-align: center;
-        }
-        .sbox{
-            width: 800px;
-            height: 80px;
-            margin-top: 110px;
-            margin-left: 50px;
-            line-height: 80px;
-            color: #2D3446;
-            
-        }
-        .sbox input{
-            width: 150px;
-            height: 40px;
-            color:grey;
-            background-color: white;
-            border:1px solid gray;
-            z-index: 3; 
-            text-align: center; 
-            margin: 5px;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-        .title{
-            font-size: 30px;
-            color: #2D3446;
-            font-weight: bolder;
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            
-        }
-        .location{
-            width: 1080px;
-            height: 400px;
-            margin: auto;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-        }
-    
-        .box{
-            width: 250px;
-            height: 200px;
-            margin-bottom: 20px; 
-            position: relative;
-        }
-        .box img{
-            border-radius: 3px;  
-        }
-        .box img:hover{
-            opacity:0.6;
-            border: 1px solid grey;
-        }
-        .boxname{
-            width: 80px;
-            height: 30px;
-            font-size: 18px;
-            color: white;
-            text-align: center;
-            background: #2D3446;
-            position: absolute;
-            border-radius: 80px 15px;
-            right: -15px;
-            bottom:-5px;
-            line-height: 30px;
-        }
-        .more{
-            width: 1200px;
-            height: 25px;
-            margin: auto;
-           text-align: end;
-           
-          
-        }
-        .more a{
-            font-size: 15px;
-            text-decoration: none;
-            color: #2D3446;
-        }
-        .more a:hover{
-            color: gray;
-            
-        }
-        .row{
-            width: 1200px;
-            display: flex;
-            flex-wrap: wrap;
-            margin: auto;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" >
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="test.js"></script>
 
-        .sale{
-            width: 600px;
-            display: flex;
-            position: relative;
-            box-sizing: border-box;
-            border-radius: 30px;
-            margin-bottom: 30px;
-        }
-        .salebox{
-            width: 500px;
-            height: 300px;
-            clip-path: polygon(0 0, 100% 0, 81% 100%, 0% 100%);
-            margin-left: 40px;
-            margin-top: -5px;
-            
-            
-            
-        }
-        .salebox img{
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
-         
-        }
 
-        .saletext{
-            width: 400px;
-            height: 200px;
-            padding: 10px;
-            box-sizing: border-box;
-            background-color:#F4F3EA;
-            clip-path: polygon(20% 0, 100% 0, 100% 100%, 8% 100%);
-            margin-top: 50px;
-            margin-left: -60px;
-            border-radius: 4px;
-            text-align: center;
- 
-        }
-        .saletext p{
-            margin-top:40px ;
-            font-size: large;
-            
-        }
 
-        .s_box{
-            width: 600px;
-            display: flex;
-            position: relative;
-        }
-        .s_content{
-            width: 400px;
-            height: 70px;
-            background-color:firebrick;
-            position: absolute;
-            left:400px;
-            top:150px;
-            color: white;
-            font-size: 15px;
-            text-align: center;
-          
-            
-        }
 
-        .s_img{
-            width: 70%;
-        }
-        .new{
-            width: 1200px;
-            height: 300px;
-            display: flex;
-            margin: auto;
-            align-items: center;
-            justify-content: space-evenly;  
-        }
-      .newbox{
-          width: 300px;
-          height: 300px;
-          background-color: #CAD0D7;
-          cursor: pointer;
-      }
-      .newbtn{
-          width: 50px;
-          height: 50px;
-          background-color: #CAD0D7;
-          color: #2D3446;
-        text-align: center;
-          line-height: 50px;
-          font-size: 30px;
-          border-radius: 50%;
-          cursor: pointer;
-      }
-      .newbox:hover{
-        opacity: 0.8;
-      }
-      .newbtn:hover{
-        opacity: 0.8;
-        color:#D3AC2B;
-        background-color: #2D3446;
-      }
-      .newimg{
-          width: 300px;
-          height: 220px;
-          background-color: #2D3446;
-      }
-      .newtext{
-          width: 300px;
-          height: 80px;
-          padding: 5px;
-          box-sizing: border-box;
-
-      }
-      .newimg img{
-          width: 100%;
-          height: 100%;
-      }
-    .about{
-            display: flex;
-            justify-content: center;
-            background-color: #CAD0D7;
-            align-items: center;
-        }
-        .abox{
-            width:200px;
-            height: 100px;
-            padding: 30px;
-            text-align: center;
-        }
-        .aboutimg{
-            width: 100px;
-            height: 100px;
-
-        }
-        .aboutimg img{
-            width: 100%;
-            opacity: 0.8;
-        }
-        .footer{
-            font-size: 15px;
-            height: 30px;
-            background-color:#2D3446;
-            color: white;
-            text-align: center;
-            line-height: 30px;
-        }
-
-        .time{
-            width: 400px;
-            margin: auto;
-            margin-bottom: 20px;
-            text-align: center;
-            height: 50px;
-            color: red;
-            line-height: 50px;
-        }
-        .row1{
-            display: flex;
-        }
-        .shapea{
-            width: 70%;
-            height: 300px;
-            display: flex;
-            background-color: #F4F3EA;
-            clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
-            align-items: center;
-            position: relative;
-              
-        }
-        .shapeb{
-            width: 30%;
-            height: 300px;
-            padding: 10px;
-            text-align: center;
-            box-sizing: border-box;
-            
-        }
-        .shapeb h3{
-            margin-top: 60px;
-            color: #D3AC2B;
-            font-size: 20px;
-        }
-        .shapeb p{
-            margin-top: 20px;
-            color: #2D3446;
-        }
-        .shapeb button{
-            width: 100px;
-            height: 40px;
-            border: none;
-            margin-top: 10px;
-            background-color: #D3AC2B;
-            cursor: pointer;
-        }
-        .shapeb button:hover{
-            background-color: #2D3446;
-            color: white;
-        }
-        .shbox{
-            width: 20%;
-            height: 250px;
-            padding: 10px;
-            margin: 10px;
-            box-sizing: border-box;
-            background-color: #E5E5E5; 
-            cursor: pointer;   
-        }
-        .shbox:hover{
-            opacity: 0.8;
-        }
-        .shimg{
-            height: 180px;
-            background-color: #CBD0D8;
-        }
-        .shimg img{
-            width: 100%;
-            height: 100%;
-        }
-        .shtext{
-            box-sizing: border-box;
-            height: 50px;
-            padding: 5px;
-            color:#2D3446;
-        }
-        .shtext p{
-            font-size: 13px;
-        }
-        .shbtn{
-            width: 100px;
-            height: 100px;
-            background-color: darkgray;
-            position: absolute;
-        }
-        .final{
-            width: 100%;
-            height: 150px;
-            display: flex;
-            background-color:#F4F3EA;
-            margin-bottom: 30px;
-        }
-        .fbox{
-            padding: 5px;
-            width: 25%;
-            height: 20px;
-            box-sizing: border-box;
-            text-align: center;
-            color: #2D3446;
-            
-        }
-        .fbox h3{
-            background-color: #2D3446;
-            color: white;
-        }
-        .fbox p{
-            margin-top: 20px;
-        }
-
-    </style>
 </head>
 <body>
-<!--頁首-->
-<div class="header">
-    <div class="headbox"><a href="index.html"><img src="pic\logo_1.png" alt=""></a></div>
-    <div class="headbox">
-     <ul>
-         <li><a href="discount.html">折扣優惠</a></li>
-         <li><a href="houseall.html">民宿總覽</a></li>
-         <li><a href="travel.html">旅遊攻略</a></li>
-         <li><a href="host.html">旅宿業者專區</a></li>
-     </ul>
-    </div>
-</div>
-<!--輪播圖-->
-    <div class="banner"><img src="pic\banner_7.jpg" alt=""></div>
-<!--搜尋框-->
-    <div class="search">  
-        <div class="sitem">請選擇地點</div>
-        <div class="sitem">入住日期</div>
-        <div class="sitem">退房日期</div>
-        <div class="sitem">人數</div>
-        <button><a href="result.html">搜尋</a></button>
-        
-    </div>
-<!--熱門目的地-->
-    
-    <div class="dest">
+     <div class="header">
+        <input type="checkbox" name="menu-switcher" id="menu-switcher" />
+        <label for="menu-switcher" class="hamburger">
+          <div class="hamburger-line"></div>
+        </label>
+      <div class="logo">
+          <a href="index.html"></a>
+      </div>
+        <ul class="menu">
+          <li><a href="discount.html">折扣優惠</a></li>
+          <li><a href="houseall.html">民宿總覽</a></li>
+          <li><a href="travel.html">旅遊攻略</a></li>
+          <li><a href="host.html">旅宿業者專區</a></li>
+        </ul>
+      </div> 
+
+      <div class="banner">
+        <span class="text1">Traveling in Taiwan</span>
+      </div>
+
+      <div class="search">  
+        <div class="sitem">
+            <input id="email" type="text" placeholder="輸入地名" >
+        </div>
+        <div class="sitem" >
+            <input id="date" type="date" value="2021-08-11"  min="2021-08-11"></div>
+        <div class="sitem">
+            <input id="date" type="date" value="2021-08-12"  min="2021-08-12"></div>
+        <div class="sitem">
+            <select name="select_one">
+                <option value="1">1人</option>
+                <option value="2">2人</option>
+                <option value="3">3人</option>
+                <option value="3">4人</option>
+                <option value="3">5人</option>
+                <option value="3">6人</option>
+                </select>
+        </div>
+        <div class="sitem">
+            <button type="submit"><a href="result.html">搜尋</a></button>
+        </div></div>
+
+        <div class="dest"  data-aos="fade-left"  >
+          <div class="dleft" >
+              <div class="dtext" >
+                  <h2>熱門目的地</h2>
+                  <p>一起探索台灣！<br>
+                      選擇你要的目的地</p>
+                      <!-- <button type="submit"><a href="houseall.html">GO</a></button>       -->
+              </div>
+  
+              </div>
+              <div class="dright">
+                  <div class="place">
+                      <div class="ppic" >
+                          <a href="result.html" ><img src="pic\pic-1.jpg" alt=""></a>
+                          <div class="pname">台北</div>
+                      </div>
+                      
+                  </div>
+                  <div class="place" >
+                      <div class="ppic" >
+                          <a href="result.html"><img src="pic\pic-2.jpg" alt=""style="overflow:hidden;"></a>
+                          <div class="pname">台中</div>
+                      </div>
+                      
+                  </div>
+  
+                  <div class="place">
+                      <div class="ppic">
+                          <a href="result.html"><img src="pic\pic-3.jpg" alt=""style="overflow:hidden;"></a>
+                          <div class="pname">宜蘭</div>
+                      </div>
+                      
+                  </div>
+                  <div class="place">
+                      <div class="ppic">
+                          <a href="result.html"><img src="pic\pic-4.jpg" alt=""style="overflow:hidden;"></a>
+                          <div class="pname">花蓮</div>
+                      </div>
+                      
+                  </div>
+                  <div class="place">
+                      <div class="ppic">
+                          <a href=""><img src="pic\pic-5.jpg" alt=""style="overflow:hidden;"></a>
+                          <div class="pname">台東</div>
+                      </div>
+                     
+                  </div>
+                  <div class="place">
+                      <div class="ppic">
+                          <a href=""><img src="pic\pic-6.jpg" alt=""style="overflow:hidden;"></a>
+                          <div class="pname">澎湖</div>
+                      </div>
+                      
+                  </div>
+                  <div class="place">
+                      <div class="ppic">
+                          <a href=""><img src="pic\pic-7.jpg" alt=""style="overflow:hidden;"></a>
+                          <div class="pname">台南</div>
+                      </div>
+                      
+                  </div>
+                  <div class="place">
+                      <div class="ppic">
+                          <a href=""><img src="pic\pic-8.jpg" alt=""style="overflow:hidden;"></a>
+                          <div class="pname">高雄</div>
+                      </div>
+                      
+                  </div>
+  
+              </div>
+          </div>
+
+          <div class="time">
+             <div class="title">
+                <h2 >限時特價</h2>
+             </div> 
+            <h4 id="showtime" data-aos="zoom-in"></h4>
+          </div>
+          <div class="dest" >
+              <div class="sale" data-aos="fade-down"  data-aos-delay="100"> 
+                  <div class="info">
+                      <button>立即搶購</button>
+                  </div>
+              <div class="salepic">
+                  <img src="pic\q1.jpg" alt=""></div>
+              <div class="saletext">
+                  <h3>海景美屋</h3>
+                  <span class="mapicon">前鎮區,高雄市</span>
+                  <ul>
+                      <li>早餐</li>
+                      <li>停車</li>
+  
+                  </ul>
+                  <p>豪華雙人房</p>
+                  <h4 class="dele">NT$ 1,888</h4>
+                  <h4 class="red">NT$ 1,865</h4>
+  
+              </div>
+          </div>
+             
+              <div class="sale" data-aos="fade-down"  data-aos-delay="200">
+                  <div class="info">
+                      <button>立即搶購</button>
+                  </div>
+              <div class="salepic">
+                  <img src="pic\a2.jpg" alt=""></div>
+              <div class="saletext">
+                  <h3>海景美屋</h3>
+                  <span class="mapicon">前鎮區,高雄市</span>
+                  <ul>
+                      <li>早餐</li>
+                      <li>停車</li>
+  
+                  </ul>
+                  <p>豪華雙人房</p>
+                  <h4 class="dele">NT$ 1,888</h4>
+                  <h4 class="red">NT$ 1,865</h4>
+  
+              </div>
+          </div>
+              <div class="sale" data-aos="fade-down"  data-aos-delay="300">
+                  <div class="info">
+                      <button>立即搶購</button>
+                  </div>
+              <div class="salepic">
+                  <img src="pic\tr3.jpg" alt=""></div>
+              <div class="saletext">
+                  <h3>普悠瑪民宿</h3>
+                  <span class="mapicon">台東市,台東縣</span>
+                  <ul>
+                      <li>免費WiFi</li>
+  
+                  </ul>
+                  <p >豪華雙人房</p>
+                  <h4 class="dele">NT$ 1,888</h4>
+                  <h4 class="red">NT$ 1,265</h4>
+  
+              </div>
+          </div>
+              <div class="sale" data-aos="fade-down"  data-aos-delay="400">
+                  <div class="info">
+                      <button>立即搶購</button>
+                  </div>
+              <div class="salepic">
+                  <img src="pic\sale3.jpg" alt="">
+  </div>
+              <div class="saletext">
+                  <h3>春大地</h3>
+                  <span class="mapicon">墾丁,台灣</span>
+                  <ul>
+                      <li>早餐</li>
+                      <li>免費WiFi</li>
+                      <li>免費取消</li>
+                  </ul>
+                  <p>豪華雙人房</p>
+                  <h4 class="dele">NT$ 1,888</h4>
+                  <h4 class="red">NT$ 1,005</h4>
+  
+                
+              </div>
+          </div>
+          
+      </div>   
+      <div class="dest" style="flex-direction:row-reverse" data-aos="fade-right">
         <div class="dleft">
-            <div class="text">
-                <h2>熱門目的地</h2>
-                <p>一起探索台灣！<br>
-                    選擇你要的目的地</p>
+            <div class="dtext">
+                <h2>安心防疫</h2>
+                <p>入住「防疫旅宿」，住處沒有可獨立使用的房間及衛浴，需要與同住家人保持安全距離。「檢疫者的家屬」也能選擇入住「安心旅館」。</p>
+       
             </div>
-            <div class="shape"></div>
-            <div class="circle">
-                <span><a href="#"></a>查看更多</span>
-                </div>
-        
+
             </div>
             <div class="dright">
                 <div class="place">
                     <div class="ppic">
-                        <a href=""><img src="pic\pic-1.jpg" alt=""style="overflow:hidden;"></a>
+                        <a href="result.html"><img src="pic\p1.jpg" alt=""></a>
+                        <div class="pname1">
+                            <h3>超大陽台</h3>
+                            <span>透氣散散心</span>
+                        </div>
+                        <div class="info">
+                            
+                        </div>
                     </div>
-                    <div class="pname">台北</div>
+                    
                 </div>
                 <div class="place">
                     <div class="ppic">
-                        <a href=""><img src="pic\pic-2.jpg" alt=""style="overflow:hidden;"></a>
+                        <a href="result.html"><img src="pic\p3.jpg" alt=""style="overflow:hidden;"></a>
+                        <div class="pname1">
+                            <h3>大坪數</h3>
+                            <span>寬敞零壓力</span>
+                        </div>
+                        <div class="info">
+                            
+                        </div>
                     </div>
-                    <div class="pname">台中</div>
+                    
                 </div>
 
                 <div class="place">
                     <div class="ppic">
-                        <a href=""><img src="pic\pic-3.jpg" alt=""style="overflow:hidden;"></a>
+                        <a href="result.html"><img src="pic\p2.jpg" alt=""style="overflow:hidden;"></a>
+                        <div class="pname1">
+                            <h3>可開窗</h3>
+                            <span>呼吸新鮮空氣</span>
+                        </div>
+                        <div class="info">
+                            
+                        </div>
                     </div>
-                    <div class="pname">宜蘭</div>
+                    
                 </div>
                 <div class="place">
                     <div class="ppic">
-                        <a href=""><img src="pic\pic-4.jpg" alt=""style="overflow:hidden;"></a>
+                        <a href="result.html"><img src="pic\p4.jpg" alt=""style="overflow:hidden;"></a>
+                        <div class="pname1">
+                            <h3>大窗戶</h3>
+                            <span>享受自然採光</span>
+                        </div>
+                        <div class="info">
+                            
+                        </div>
                     </div>
-                    <div class="pname">花蓮</div>
+                    
                 </div>
                 <div class="place">
                     <div class="ppic">
-                        <a href=""><img src="pic\pic-5.jpg" alt=""style="overflow:hidden;"></a>
+                        <a href=""><img src="pic\p5.jpg" alt=""style="overflow:hidden;"></a>
+                        <div class="pname1">
+                            <h3>家庭同住</h3>
+                            <span>安心照顧家人</span>
+                        </div>
+                        <div class="info">
+                            
+                        </div>
                     </div>
-                    <div class="pname">台東</div>
+                   
                 </div>
                 <div class="place">
                     <div class="ppic">
-                        <a href=""><img src="pic\pic-6.jpg" alt=""style="overflow:hidden;"></a>
+                        <a href=""><img src="pic\p6.jpg" alt=""style="overflow:hidden;"></a>
+                        <div class="pname1">
+                            <h3>嬰兒友善</h3>
+                            <span>貼心小幫手</span>
+                        </div>
+                        <div class="info">
+                            
+                        </div>
                     </div>
-                    <div class="pname">澎湖</div>
+                    
                 </div>
                 <div class="place">
                     <div class="ppic">
-                        <a href=""><img src="pic\pic-7.jpg" alt=""style="overflow:hidden;"></a>
+                        <a href=""><img src="pic\p8.jpg" alt=""style="overflow:hidden;"></a>
+                        <div class="pname1">
+                            <h3>浴缸房</h3>
+                            <span>泡澡享受生活</span>
+                        </div>
+                        <div class="info">
+                            
+                        </div>
                     </div>
-                    <div class="pname">台南</div>
+                    
                 </div>
                 <div class="place">
                     <div class="ppic">
-                        <a href=""><img src="pic\pic-8.jpg" alt=""style="overflow:hidden;"></a>
+                        <a href=""><img src="pic\p7.jpg" alt=""style="overflow:hidden;"></a>
+                        <div class="pname1">
+                            <h3>不加價</h3>
+                            <span>提早/延後入住</span>
+                        </div>
+                        <div class="info">
+                            
+                        </div>
                     </div>
-                    <div class="pname">高雄</div>
+                    
                 </div>
 
             </div>
         </div>
-        
-    </div>
-    <!--限時特價-->
-        <div class="title">限時特價</div>
-        <div class="time"><h2>剩餘時間 15：23：59 </h2></div>
-        <div class="row">
-            
-            <div class="sale">
-            <div class="salebox">
-                <img src="pic\a1.jpg" alt=""></div>
-            <div class="saletext">
-                <h3>布魯懷特民宿</h3>
-                <span>宜蘭縣五結鄉</span>
-                <p>玫瑰二人房</p>
-                <h4 style="text-decoration: line-through;">TWD 1,888</h4>
-                <h4 style="color: red;">TWD999</h4>
-            </div>
-            <div class="circle">查看更多</div>
+        <div class="title">
+            <h2>最新房源</h2>
         </div>
-        <div class="sale">
-            <div class="salebox">
-                <img src="pic\a2.jpg" alt=""></div>
-            <div class="saletext">
-                <h3>後山人家民宿A館</h3>
-                <span>台東縣鹿野鄉</span>
-                <p>暇意雙人房(附早餐)</p>
-                <h4 style="text-decoration: line-through;">TWD 1,998</h4>
-                <h4 style="color: red;">TWD1,299</h4>
-            </div>
-            <div class="circle">查看更多</div>
-        </div></div>        
-    <!--防疫旅館-->    
-    <div class="title">防疫旅宿</div>
+        <div class="itemPanel">    
+            <div class="wrap1">
+                <div class="item">
+                    <img src="pic/q1.jpg">
+                    <div class="newname">
+                        <h4>高雄住宿 eauty-House
+                        </h4>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="pic/q2.jpg">
 
-        <div class="row1">
-            <div class="shapea">
-                <div class="shbox">
-                    <div class="shimg">
-                        <img src="pic\c1.jpg" alt="">
-                    </div>
-                    <div class="shtext">
-                        <h3>享棧民宿</h3>
-                        <p>台東縣台東市</p>
+                        <div class="newname">
+                        <h4>台東住宿 池上稻香文旅
+                        </h4>
                     </div>
                 </div>
-                <div class="shbox">
-                    <div class="shimg">
-                        <img src="pic\tr2.jpg" alt="">
-                    </div>
-                    <div class="shtext">
-                        <h3>睏睏的</h3>
-                        <p>台中市沙鹿區</p>
+                <div class="item">
+                    <img src="pic/c2.jpg">
+                    <div class="newname">
+                        <h4>花蓮住宿 歐風文旅
+                        </h4>
                     </div>
                 </div>
-                <div class="shbox">
-                    <div class="shimg">
-                        <img src="pic\c2.jpg" alt="">
-                    </div>
-                    <div class="shtext">
-                        <h3>葉綠宿．川閱</h3>
-                        <p>台中市中區</p>
+                <div class="item">
+                    <img src="pic/p4.jpg">
+                    <div class="newname">
+                        <h4>花蓮住宿 尤大廚的家
+                        </h4>
                     </div>
                 </div>
-                <div class="shbox">
-                    <div class="shimg">
-                        <img src="pic\tr3.jpg" alt="">
-                    </div>
-                    <div class="shtext">
-                        <h3>桂之旅</h3>
-                        <p>台中市西屯區</p>
+                <div class="item">
+                    <img src="pic/sale1.jpg">
+                    <div class="newname">
+                        <h4>新竹住宿 香草HOUSE
+                        </h4>
                     </div>
                 </div>
-                
-        </div>
-            <div class="shapeb">
-                <h3>安心防疫</h3>
-                
-                <p>入住「防疫旅宿」，住處沒有可獨立<br>使用的房間及衛浴，需要與同住家人<br>保持安全距離。「檢疫者的家屬」也<br>能選擇入住「安心旅館」。</p>
-                <button>查看更多房源</button>
+                <div class="item">
+                    <img src="pic/sale3.jpg">
+                    <div class="newname">
+                        <h4>桃園住宿 旅人驛站
+                        </h4>
+                    </div>
+                </div>        
             </div>
         </div>
-<!--最新房源-->
-    <div class="title">最新房源</div>
-        <div class="new">
-            <div class="newbtn"><strong><</strong></div>
-            <div class="newbox">
-                <div class="newimg"><img src="pic\a2.jpg" alt=""></div>
-                <div class="newtext">
-                    <h3>葉綠宿．川閱</h3>
-                    <span>台中市西屯區</span>
-                    <p>雙人房 TWD5,070起</p>
-                    
-                </div>
-                
-            </div>
-            <div class="newbox">
-                <div class="newimg"><img src="pic\r1.jpg" alt=""></div>
-                <div class="newtext">
-                    <h3>桂之旅</h3>
-                    <span>台中市西屯區</span>
-                    <p>雙人房 TWD5,000起</p>
-                    
-                </div>
-            </div>
-            <div class="newbox">
-                <div class="newimg"><img src="pic\tr2.jpg" alt=""></div>
-                <div class="newtext">
-                    <h3>享棧民宿</h3>
-                    <span>台中市西屯區</span>
-                    <p>雙人房 TWD5,050起</p>
-                    
-                </div>
-            </div>
-            <div class="newbtn"><strong>></strong></div>
+        <div id="leftRightPanel">
+            <input type="button" id="btnLeft" value="<"  disabled>
+            <input type="button" id="btnRight" value=">" >
         </div>
-<!--到民宿-->
-        <div class="title">到民宿幫助你完成旅行</div>
+        <div class="title">
+            <h2>到民宿幫助你完成旅行</h2></div>
         <div class="final">
             <div class="fbox">
-                <h3>免費最多項</h3>
-                <p>免手續費<br>訂房服務費<br>國內特定免清潔費</p>
+                <div class="tag">
+                    <img src="pic/r1.png" alt="">
+                </div>
+                <div class="tagtxt">
+                    <h3>免費最多項</h3>
+                    <ul>
+                        <li>免手續費</li>
+                        <li>免訂房服務費</li>
+                        <li>國內特定免清潔費</li>
+                    </ul>
+                    
+                </div>
+               
             </div>
             <div class="fbox">
-                <h3>特色旅宿最齊全</h3>
-                <p>嚴選 60,000+以上特色房間<br>親子、溫泉各種房源輕鬆預訂</p>
+                <div class="tag">
+                    <img src="pic/r2.png" alt="">
+                </div>
+                <div class="tagtxt">
+                    <h3>特色旅宿最齊全</h3>
+                    <ul>
+                        <li>60,000+以上特色房間</li>
+                        <li>各種房源輕鬆預訂</li>
+                    </ul>
+                    
+                </div>
+
             </div>
             <div class="fbox">
+                <div class="tag">
+                    <img src="pic/r3.png" alt="">
+                </div>
+               <div class="tagtxt">
                 <h3>體驗最友善</h3>
-                <p>簡易操作畫面，清晰介面<br>貼心的個人化推薦服務</p>
+                <ul>
+                    <li>簡易操作畫面，清晰介面</li>
+                    <li>貼心的個人化推薦服務</li>
+                </ul>
+                
+               </div>
             </div>
             <div class="fbox">
-                <h3>完善客服</h3>
-                <p>真人客服，和屋主溝通零誤差，<br>入住免擔心！</p>
+                <div class="tag">
+                    <img src="pic/r4.png" alt="">
+                </div>
+                <div class="tagtxt">
+                    <h3>完善客服</h3>
+                    <ul>
+                        <li>真人客服，和屋主溝通零誤差</li>
+                        
+                    </ul>
+                   
+                </div>
+  
             </div>
 
         </div>
-    <div class="about">
-        <div class="aboutimg"><img src="pic\p1.png" alt=""></div>
-        <div class="abox">
-            <h3>聯絡資訊</h3>
-            <p>週一 ~ 週日0900-2200</p>
-            <p>電話：+886123123</p>
-            <p>信箱：test123@test.com</p>
-        </div>
         
-        
-    </div>
-</div>
-<div class="footer">Copyright © 2021 DMS Inc.</div>
-
-
-
-
+          <div class="footer">Copyright © 2021 DMS Inc.</div>
+              
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+              AOS.init({
+                  duration: 2000,
+                  delay:1,
+                  once: true,
+               
+          })
+          </script>
 </body>
 </html>

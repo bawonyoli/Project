@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>到民宿。旅遊攻略</title>
+    <link rel="stylesheet" href="dms.css">
+    <style>
+        .banner{
+            width: 1000px;
+            display: flex;
+            margin: auto;
+            margin-top: 30px;  
+        }
+        .box{
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .around{
+            max-width: 1200px;
+            margin: auto;
+            background-color: salmon;
+            display: flex;
+            justify-content: space-between;
+        }
+        .aroundbox{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: seagreen;
+        }
+        .box1{
+            align-items: center;
+        }
+        .item {
+            flex: 1 1 30%;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            overflow: hidden;
+        }
+        .item2 {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 60%;
+
+            }
+            .text{
+                width: 300px;
+                height: 200px;
+            }
+            hr{
+                margin-top: 5px;
+                background-color: darkgoldenrod;
+            }
+            .plan{
+                width: 100%;
+                height: 600px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .list{
+                width: 100%;
+                position: relative;
+                z-index: 2;
+            }
+            .list ul{
+                display: flex;
+                justify-content: center;
+                
+            }
+
+            .list ul li{
+                width: 150px;
+                text-align: center;
+                font-size: 20px;
+                background-color: #D3AC2B ;
+                margin-left: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .list ul li:hover{
+                background-color: #333D51 ;
+                
+                cursor: pointer;
+            }
+            .trip{
+                width: 1200px;
+                height: 500px;
+                margin: auto;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                display: flex;
+                position: relative;
+                overflow: hidden; 
+                
+            }
+            .shape1{
+                width: 500px;
+                height: 500px;
+                background-color: #333D51 ;
+                position: absolute;
+                clip-path: polygon(100% 0, 0 0, 0 100%);
+                z-index: 1;
+            }
+            .shape2{
+                width: 500px;
+                height: 500px;
+                background-color: #333D51 ;
+                position: absolute;
+                clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+            }
+
+            .tripbox{
+                width: 550px;
+                height: 200px;
+                display: flex;
+                background-color:#F4F3EA;
+                z-index: 2;
+                box-shadow: -10px -10px 1px white ;
+                
+            }
+            .trpic{
+                width: 250px;
+                height: 200px;
+                
+            }
+            .trpic img{
+                width: 100%;
+                height: 100%;
+                opacity: 0.8;
+               
+            }
+            .trtext{
+                color: #333D51 ;
+                width: 300px;
+                height: 200px; 
+                box-sizing: border-box;
+                padding: 10px;
+            
+            }
+            .trtext p{
+                margin-top: 10px;
+                margin-left:30px;
+            }
+            .trtext button{
+                width: 150px;
+                height: 30px;
+                margin-left: 140px;
+                margin-top: 5px;
+                line-height: 30px;
+                background-color: #D3AC2B;
+                border: none;
+                border-radius: 5px;
+            }
+            .trtext button:hover{
+                background-color: #333D51 ;
+                color:white;
+                cursor: pointer;
+            }
+            .trtext h4{
+                margin-top: 5px;
+                margin-left: 150px;
+            }
+            .btn{
+                width: 600px;
+                margin: auto;
+                height: 40px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .btnl{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color:#D3AC2B;
+                z-index: 3;
+                color: white;
+                text-align: center;
+                line-height: 30px;
+                font-size: 18px;
+                
+            }
+            .btnl:hover{
+                background-color: #F4F3EA;
+                color: black;
+                cursor: pointer;
+            }
+            .tip{
+                width: 100%;
+                height: 500px;
+                display: flex;
+            }
+            .tipleft{
+                width: 30%;
+                padding: 10px;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            .tipleft ul{
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .tipleft ul li{
+                background-color: #333D51;
+                width: 90px;
+                height: 30px;
+                margin:10px;
+                line-height: 30px;
+                color: white;
+                cursor: pointer;
+            }
+            .tipleft ul li:hover{
+                background-color:#D3AC2B;
+            }
+            .tipright{
+                display: flex;
+                flex-wrap: wrap;
+                width: 1000px;
+                height: 500px;
+                box-sizing: border-box;
+                align-items: center;
+                justify-content: space-around;
+                
+            
+            }
+            .trbox{
+                width: 400px;
+                height: 200px;
+                background-color:#F4F3EA;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .trbox p{
+                margin-top: 10px;
+            }
+            
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="headbox"><a href="index.html"><img src="pic\logo_1.png" alt=""></a></div>
+        <div class="headbox">
+         <ul>
+             <li><a href="discount.html">折扣優惠</a></li>
+             <li><a href="houseall.html">民宿總覽</a></li>
+             <li><a href="travel.html">旅遊攻略</a></li>
+             <li><a href="host.html">旅宿業者專區</a></li>
+         </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="box">
+            <div class="item"><img src="pic\box-4.jpg" alt=""></div>
+            <div class="item item2"><img src="pic\t1.jpg" alt=""></div>
+            <div class="item"><img src="pic\t3.jpg" alt=""></div>
+            <div class="item"><img src="pic\pic-3.jpg" alt=""></div>
+        </div>
+        <div class="box box1">
+            <div class="text">
+                <h3>台灣旅遊 | 台灣景點</h3>
+                <hr>
+                <p>台灣自然景觀與生態資源豐富，<br>
+                    想怎麼玩，讓到民宿告訴你
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="search">  
+        <div class="sitem">請選擇地點</div>
+        <div class="sitem">入住日期</div>
+        <div class="sitem">退房日期</div>
+        <div class="sitem">人數</div>
+        <button><a href="result.html">搜尋</a></button>
+        
+    </div>
+    <div class="title">熱門路線</div>
+    <div class="tip">
+        <div class="tipleft">
+            <h3>挑選一條想去的路線</h3>
+            <ul>
+               <li>熱門路線</li>
+               <li>北台灣路線</li>
+               <li>中台灣路線</li>
+               <li>南台灣路線</li>
+               <li>東台灣路線</li>
+               <li>外島路線</li>
+            
+             
+           </ul>
+        </div>
+        <div class="tipright">
+            <div class="trbox">
+                <h3>宜蘭兩天一夜行程</h3>
+                <p>D1：烏石港、蘭陽博物館＞金車伯朗咖啡城堡、外澳服務區＞（午餐）樂山溫泉拉麵＞窯烤山寨村、亞典蛋糕密碼館、橘之鄉蜜餞形象館，異國風情好好拍＞ 幾米廣場+飛天火車+綠鐵樹丟丟噹森林＞羅東夜市<br></p>
+                <p> D2：天送碑車站＞明池國家森林遊樂區＞清水地熱公園＞梅花湖公園騎腳踏車</p>
+                    
+            </div>
+            <div class="trbox">
+                <h3>宜蘭X東北角X新北市兩天一夜行程：</h3>
+                <p>D1：長埤湖風景區＞（午餐）大洲魚寮無菜單料理 ＞羅東運動公園＞（住宿+下午茶）La Palette調色盤築夢會館＞（晚餐）兔子迷宮親子餐廳<br></p>
+                <p>D2：羅東林業文化園區+林場肉羹＞窯烤山寨村、亞典蛋糕密碼館、橘之鄉蜜餞形象館</p>
+            </div>
+            <div class="trbox">
+                <h3>宜蘭二天一夜行程</h3>
+                <p>D1：伯朗咖啡城堡(金車咖啡城堡)＞粉鳥林漁港+阿滿姨小吃店＞內埤海灣(情人灣) + 海洋20M咖啡館 ＞蘇澳 月牙彎 ＞ 南方澳觀景台＞ 無尾港邊社區<br></p>
+                <p> D2：福山植物園＞午餐：金車 KA VA LAN噶瑪蘭威士忌酒廠 ＞宜蘭米粉羹</p>
+            </div>
+            <div class="trbox">
+                <h3>宜蘭二天一夜行程</h3>
+                <p>D1：九份老街半日遊 ＞水鹿咖啡觀光牧場親子餐廳 ＞四圍堡車站<br></p>
+                <p>D2：十六崁瓜仔雞麵店+合盛太平咖啡館+隱藏版秒殺白粉圓攤販 ＞陳定南紀念館 ＞大洲馬場 ＞菓風糖果工房  </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="title">熱門套裝行程</div>
+        <div class="plan">
+            <div class="shape1"></div>
+            
+            <div class="list">
+           
+                <ul>
+                <li><a href="#">北部</a></li>
+                <li><a href="#">中部</a></li>
+                <li><a href="#">南部</a></li>
+                <li><a href="#">東部</a></li>
+                <li><a href="#">離島</a></li>
+            </ul>
+        </div>
+            <div class="trip">
+                
+                <div class="tripbox">
+                    <div class="trpic">
+                        <img src="pic\tr4.jpg" alt=""></div>
+                    <div class="trtext">
+                        <h3>花蓮民宿「薩爾茲堡莊園」</h3>
+                        <span>雙人兩天一夜 慢活套裝行程</span>
+                        <p>1. 星月旅店住宿一晚<br>
+                            2. 活力早餐<br>
+                            3. 東港至小琉球來回船票<br>
+                            4. 贈送-潮間帶<br>
+                        </p>
+                        <h4>TWD5,000起</h4>
+                        <button>查看更多</button>
+                    </div>
+                </div>
+                <div class="tripbox">
+                    <div class="trpic">
+                        <img src="pic\tr8.jpg" alt=""></div>
+                    <div class="trtext">
+                        <h3>台東民宿「布拉諾城堡民宿」</h3>
+                        <span>四人一泊二食~親子假期專案</span>
+                        <p>1. 豪華親子房<br>
+                            2. 經典下午茶<br>
+                            3. 娜娜賽車場入場券*4<br>
+                            4. 觀賞娜路灣劇場<br>
+                        </p>
+                        <h4>TWD5,600起</h4>
+                        <button>查看更多</button>
+                    </div>
+                </div>
+                <div class="tripbox">
+                    <div class="trpic">
+                        <img src="pic\tr9.jpg" alt=""></div>
+                    <div class="trtext">
+                        <h3>台東民宿「富山海灣」</h3>
+                        <span>12人包棟優惠專案</span>
+                        <p>1. 4人房*3間<br>
+                            2. 免費使用花園烤肉區<br>
+                            3. 贈送綠境入園門票<br>
+                            4. 免費停車<br>
+                        </p>
+                        <h4>TWD5,000起</h4>
+                        <button>查看更多</button>
+                    </div>
+                </div>
+                <div class="tripbox">
+                    <div class="trpic">
+                        <img src="pic\tr10.jpg" alt=""></div>
+                    <div class="trtext">
+                        <h3>台東旅館「忘憂館」</h3>
+                        <span>雙人度假悠活套裝方案</span>
+                        <p>1. 金崙溫泉門票*2<br>
+                            2. 專人接送太麻里金針山<br>
+                            3. 免費晚餐、早餐<br>
+                            4. 免費腳踏車<br>
+                        </p>
+                        <h4>TWD5,000起</h4>
+                        <button>查看更多</button>
+                    </div>
+                </div>
+            
+        </div>
+                <div class="btn">
+                    <div class="btnl"><strong><</strong></div>
+                    <div class="btnl"><strong>></strong></div>
+
+                    
+                </div>
+        </div>
+
+   
+       <div class="title">周邊旅宿快搜</div>
+       <div class="around">
+            <div class="aroundbox">1</div>
+            <div class="aroundbox">1</div>
+            <div class="aroundbox">1</div>
+            <div class="aroundbox">1</div>
+            <div class="aroundbox">1</div>
+       </div>
+   
+    <div class="footer">Copyright © 2021 DMS Inc.</div>
+
+
+
+
+</body>
+</html>
