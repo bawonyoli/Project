@@ -519,7 +519,7 @@ background-color: rgba(222, 222, 224, 0);
 #btnLeft[disabled], #btnRight[disabled]{
   color:white;
   font-size:30px;
-  weight:bold;
+
 }  
 #leftRightPanel{
   max-width: 1200px;
@@ -634,10 +634,7 @@ position: relative;
 background: color #e8ece8;
 transform: translateX(-5%);
 }
-li:hover{
-    /* background-color: #2D3446; */
-    
-}
+
 .title h2{
   font-size: 22px;
 
@@ -874,7 +871,7 @@ color: white;
 #btnLeft[disabled], #btnRight[disabled]{
   color:white;
   font-size:30px;
-  weight:bold;
+
 }  
 #leftRightPanel{
   max-width: 1080px;
